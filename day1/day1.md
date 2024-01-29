@@ -68,21 +68,21 @@ want in the first place.
 ## Rust compilers effort to make defensive coding easy
 
 For example in C we can use "short" variables which are nothing but i16 in Rust.
-Maximum integer that can be represented in 8 bits is 32767, binary format is (0111 1111 1111 1111).
+Maximum integer that can be represented using 16 bits is 32767, binary format is (0111 1111 1111 1111).
 But if you write the following in C,
 
 ```
 short x = 32768; // binary format is (1000 0000 0000 0000)
 printf("%hi", x); // What will be the output?
 ```
-Integers are represented in bitlevel using a format called 2's complement in more than
+Integers are represented in bitlevel using a format called [2's complement](https://en.wikipedia.org/wiki/Two%27s_complement) in more than
 99% of the hardwares out there.
 If the first bit starts with 0 then it is positive else negative.
 So the value "32768" will be interpreted as a negative number. If you forgot the range
 then you are in for a surprise.
 Doing the same in Rust will give you a very readable compile time error.
 [For Rust example](./intro.rs).
-Rust compiler will throw overflow error during compile time if it detects any overflow
+Rust compiler will throw overflow errors during compile time if it detects any overflow
 during [constant folding](https://en.wikipedia.org/wiki/Constant_folding).
 For dynamic overflows it panics during runtime, (C will continue to run with -ve values when 
 you add 2 +ve numbers for example.)
