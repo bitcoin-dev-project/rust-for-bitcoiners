@@ -68,11 +68,11 @@ want in the first place.
 ## Rust compilers effort to make defensive coding easy
 
 For example in C we can use "short" variables which are nothing but i16 in Rust.
-Maximum integer that can be represented in 8 bits is 32767, binary format is (0111 111).
+Maximum integer that can be represented in 8 bits is 32767, binary format is (0111 1111 1111 1111).
 But if you write the following in C,
 
 ```
-short x = 32768; // binary format is (1000 0000)
+short x = 32768; // binary format is (1000 0000 0000 0000)
 printf("%hi", x); // What will be the output?
 ```
 Integers are represented in bitlevel using a format called 2's complement in more than
@@ -86,6 +86,7 @@ Rust compiler will throw overflow error during compile time if it detects any ov
 during [constant folding](https://en.wikipedia.org/wiki/Constant_folding).
 For dynamic overflows it panics during runtime, (C will continue to run with -ve values when 
 you add 2 +ve numbers for example.)
+TRIVIA: Binary format of -1 in 16 bit integer looks like "1111 1111 1111 1111".
 
 ## Stack vs Heap memory
 
