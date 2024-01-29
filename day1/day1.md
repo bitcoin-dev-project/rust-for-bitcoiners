@@ -13,7 +13,7 @@ C (RIGHT!) etc., hides a lot of complexities from the users.
 Rust exposes everything to the user and expects the user to be explicit about what they want.
 Rust is very easy and convenient for experienced programmers because it prevents them from
 shooting themselves in the foot unlike Python (It's just a wrapper over C).
-Read this monstrosity to understand the context [https://instagram-engineering.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172](instagram_disables_gc?).
+Read this monstrosity to understand the context [instagram disables gc?](https://instagram-engineering.com/dismissing-python-garbage-collection-at-instagram-4dca40b29172).
 It is very hard to run into such problems using Rust.
 The point is Rust is a nuisance if you want to build a toy or a solo small scoped projects.
 But it has very few competitors if you want to build highly secure, robust, performant, scalable,
@@ -67,7 +67,7 @@ want in the first place.
 
 ## Rust compilers effort to make defensive coding easy
 
-For example in C we can use "short" variables which are nothing but i8 in Rust.
+For example in C we can use "short" variables which are nothing but i16 in Rust.
 Maximum integer that can be represented in 8 bits is 32767, binary format is (0111 111).
 But if you write the following in C,
 
@@ -81,6 +81,11 @@ If the first bit starts with 0 then it is positive else negative.
 So the value "32768" will be interpreted as a negative number. If you forgot the range
 then you are in for a surprise.
 Doing the same in Rust will give you a very readable compile time error.
+[For Rust example](./intro.rs).
+Rust compiler will throw overflow error during compile time if it detects any overflow
+during [constant folding](https://en.wikipedia.org/wiki/Constant_folding).
+For dynamic overflows it panics during runtime, (C will continue to run with -ve values when 
+you add 2 +ve numbers for example.)
 
 ## Stack vs Heap memory
 

@@ -17,9 +17,10 @@ fn main () {
     let j = i;
     println!("{}", i.0);
 
-    let short: i16 = 32767;
+    let short: i16 = 32767; // Constant folding error
+    let short_o: i16 = 32767 + 1; // Constant folding error
     let short1 = add1(short);
-    println!("{short1:?}");
+    println!("{short1:?}"); // Runtime panic
 }
 // int x = 5;
 // x = 5;
