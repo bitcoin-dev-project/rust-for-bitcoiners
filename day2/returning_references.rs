@@ -1,10 +1,18 @@
-fn f<'a, 'b> (x: &'a i32, y: &'b i32) -> &'b i32 {
-    y
+fn f<'a, 'b> (x: &'a i32, y: &'b i32, threshold: i32) -> &'a i32 {
+    if *x > threshold {
+        x
+    } else {
+        y
+    }
+}
+
+fn g(x: &i32) -> &i32 {
+    x
 }
 
 fn main() {
     let x = 1;
     let y = 2;
-    let r = f(&x, &y);
+    let r = f(&x, &y, 5);
     println!("{}", r);
 }

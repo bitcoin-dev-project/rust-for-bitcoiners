@@ -7,7 +7,16 @@ int* f(int x) {
     return p;
 }
 
+int* g() {
+    int x;
+    return &x;
+}
+
 int main() {
     int *p = f(5);
+    int *q = g();
     printf("%d\n", *p);
+    // *q = 7; // SEG Faulut
+    int *t = malloc(sizeof(int) * 10);
+    t[170000] = 9;
 }

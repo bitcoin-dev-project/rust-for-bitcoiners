@@ -4,7 +4,6 @@
  * If a type does not support Copy then it is moved on `=`
  * When will the Copy derivation succeeds?
  */
-#[derive(Clone, Copy)]
 struct Index(i32); // Zero cost abstraction wrapper, the machine code gerated will be similar to that of i32
 // It's only purpose to check the semantic correctness of the type
 
@@ -14,13 +13,15 @@ fn add1(short: i16) -> Option<i16> {
 
 fn main () {
     let i = Index(6);
-    let j = i;
+    let j = &i;
     println!("{}", i.0);
 
     let short: i16 = 32767; // Constant folding error
-    let short_o: i16 = 32767 + 1; // Constant folding error
+    // let short_o: i16 = 32767 + 1; // Constant folding error
     let short1 = add1(short);
     println!("{short1:?}"); // Runtime panic
+
+    let ex_s: &'static str = "string"; 
 }
 // int x = 5;
 // x = 5;
