@@ -8,7 +8,7 @@ int* f(int x) {
 }
 
 int* g() {
-    int x;
+    int x=0;
     return &x;
 }
 
