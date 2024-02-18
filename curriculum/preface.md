@@ -19,3 +19,9 @@ you write. While this may feel like unnecessary overhead coming from another lan
 JavaScript, you will soon see that it comes with many benefits that pay off in the long term, in
 performance, readability and safety. Once you get the hang of a few key aspects of this language, you
 might even find it difficult to go back!
+
+## Getting started with Rust
+
+Visual Studio code with Rust extensions enabled is the most commonly used setup and easier
+for beginners as well.
+[Click here](https://www.rust-lang.org/tools/install) to install rust in your system.
