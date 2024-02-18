@@ -38,6 +38,11 @@ In Rust we cannot mix numbers of different types together in a single expression
 let a: i32 = 5;
 let b: f64 = 5.0;
 let y = a + b; // Invalid
+let z_f64: f64 = a as f64 + b; // Valid, you are explicitly stating that the variable a should
+// be converted to type f64, implicit conversions like you would observe in C cannot be done here.
+let z_i32: i32 = a + b as i32; // Valid
+
+// Be aware of the conversion rules to avoid surprises.
 ```
 
 ## Copy trait
@@ -47,14 +52,36 @@ Numbers are copyable in Rust, meaning we can do the following.
 ```rust
 let x: i32 = 5;
 let y = x; // Value stored in x is copied to y
-let z = x + 4; // The is valid
+let z = x; // This is valid
+
+// The value 5 exists in 3 different memory locations, because it gets copied in line 54 and 55.
 ```
 For non copyable types like **String** we have different semantics because of the ownership rule.
 
 ```rust
 let s = String::from("abcd");
 let s1 = s;
-println!("{s}"); // Invalid, because variable s don't have own or refer to any value
-// Because String is not copyable
-// Because the ownership of the value `String::from("abcd")` is moved from s to s1
+println!("{s}"); // ERROR: borrow of moved value: `s`
+// Because String is not copyable, hence move semantics apply
+// Because the value owned by s is moved to the variable s1
+// s1 owns the value which was once held by s
+// Now variable s don't own or refer to any value
+// Essentially the ownership of the value is getting moved from one variable to another.
+
+// The value `String::from("abcd")` exists in a single point in memory, and it is not moved.
 ```
+
+## Why some types are Copyable but others are not?
+
+For numbers we know exactly how many bits are required to store them.
+Can the same be said about Strings? The length of a String is unbounded, essentailly
+it can be any large number only bounded by the amount of RAM of the computer.
+So if a length of a String is 1,000,000 then it effectively requires 8,000,000 bits plus
+some additional bits to store them in memory. Is it efficient to copy them in every assignment and
+function call?
+
+In Rust we can create our own type. So if we can deterministically say how many bits will be required
+to store them in memory then we can implement Copy trait for that type, else it should obey the move
+semantics.
+
+The rule is *If all the members of the struct are copyable then the struct can be copyable*.

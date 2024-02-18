@@ -32,12 +32,13 @@ let a: i32 = 6;
 let b = inc(a); // valid because type of a and the function signature of inc matches
 // The type of b is automatically inferred to be i32 from the return type of inc function
 let c: i64 = inc(a); // invalid because the output type of inc is not compatible with i64.
+let c_i64: i64 = inc(a) as i64; // Valid
 
 let x: i64 = 50;
-let y = inc(x); // Will be an error because
+let y = inc(x); // Will be an error because, the input parameter types don't match
 ```
 
-This might feel too restrictive. Essentially waht we are seeing is that inorder to define an
+This might feel too restrictive. Essentially what we are seeing is that, inorder to define an
 incrementing function for all numbers then we have to duplicate the same function code with
 different function signatures.
 
@@ -48,7 +49,7 @@ def inc(x):
 ```
 The above function will work both on integers and floating point numbers. But
 what will happen when we do ```inc("some string")```? we get a runtime error.
-In Javascript we will get hard to predict, crazy outputs.
+In Javascript we will get hard to predict, crazy outputs [read more](https://stackoverflow.com/questions/40848551/how-does-adding-string-with-integer-work-in-javascript).
 
 ## Polymorphism in Rust
 
@@ -75,7 +76,8 @@ Haskell.
 We need to add 1 to type *T* so we require that we should be able to convert *1* from *u8* to that type.
 1 requires just one bit to represent it, so the smallest possible unsigned integer is used.
 
-These type constraints allows polymorphic code but at the same time it ensures type safety.
+These type constraints allows polymorphic code but at the same time it ensures type safety in compile time.
+
 ```rust
 let x = inc(56 as u32); // works
 let y = inc(-133 as i16); // works
@@ -91,7 +93,18 @@ In Software Engineering readability does not mean is it easy to read like Englis
 It means how easy it is to reason about the code just by looking at them.
 If you are experienced in dynamic programming languages like Python, JS, Ruby etc., it might
 sound crazy when I say that Rust is more readable than any dynamic programming language in most
-cases.
+cases. *Imagine a function with 10 input parameters and 20 lines of code in a dynamic programming language*.
+
 Because just by looking at the type signature of a function you can guess what the function might do.
+In Rust we know very clearly what the input types are and how to use them. It is easy to document the code
+as well. Error handling is also simplified because compiler takes care of all the type errors.
+Testing is also a lot simplified. You would've heard the saying that tests makes it easier to
+understand the function, in Rust you don't have to test for type errors.
+
 But since Rust doesn't have GC and forces the programmer to think about pointers, lifetimes etc.,
 it adds to the cognitive load of a developer. But the advantage is that Rust programs are very efficient.
+
+## Reliability and Refactoring
+
+Refactoring a Javascript codebase can be a nightmare. But in Rust the compiler helps you throghout the
+refactoring process and you have a high degree of confidence on how the code works.
