@@ -50,6 +50,8 @@ The above function will work both on integers and floating point numbers. But
 what will happen when we do ```inc("some string")```? we get a runtime error.
 In Javascript we will get hard to predict, crazy outputs.
 
+## Polymorphism in Rust
+
 Rust ensures typesafety but this means extra work for programmers.
 But Rust with the help of Generics and Trait constraints eases most of the problems in a safe way.
 
@@ -75,6 +77,10 @@ We need to add 1 to type *T* so we require that we should be able to convert *1*
 
 These type constraints allows polymorphic code but at the same time it ensures type safety.
 ```rust
+let x = inc(56 as u32); // works
+let y = inc(-133 as i16); // works
+let z = inc(5.32130123 as f64); // works
+
 let s = "Aeda";
 inc(s); // Invalid, will be a compile time error.
 ```
