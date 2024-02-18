@@ -32,9 +32,6 @@ Some concepts from the above three can be included in regular course, with examp
 
 Other than that we can follow the regular outline of the Rust book.
 
--- Bitgo Software Engineer position
--- Crypto lessons
-
 Learning Bitcoin, and teaching Rust and bitcoin job
 
 Learning Rust for Bitcoiners

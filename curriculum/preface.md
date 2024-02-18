@@ -13,3 +13,9 @@ with exhaustive but simple examples.
 * Understand why Rust is important for the Bitcoin ecosystem.
 
 Assignments are based on Bitcoin related concepts to kindle your enthusiasm.
+
+In essence, Rust requires you to be more explicit and reason more carefully about memory management as
+you write. While this may feel like unnecessary overhead coming from another language such as Python or
+JavaScript, you will soon see that it comes with many benefits that pay off in the long term, in
+performance, readability and safety. Once you get the hang of a few key aspects of this language, you
+might even find it difficult to go back!
