@@ -1,11 +1,12 @@
-use bitcoincore_rpc::{RpcApi, Client, Auth};
+use bitcoincore_rpc::{Client, Auth};
 use bitcoin::blockdata::transaction::OutPoint;
 use std::{collections::HashSet, env};
 
-fn get_block(client: &Client, block_height: u64) -> Result<bitcoin::Block, bitcoincore_rpc::Error> {
-    let block = client.get_block_hash(block_height)?;
-    client.get_block(&block)
-}
+mod privacy;
+mod utils;
+use privacy::txs_sort_unique_input_addrs;
+use utils::*;
+
 
 fn track_utxo_set_10(client: &Client, start_height: u64) -> Result<(), bitcoincore_rpc::Error> {
     let mut utxos: HashSet<OutPoint> = HashSet::new();
@@ -49,5 +50,10 @@ fn main() {
 
     let rpc_client = Client::new(&rpc_url, Auth::UserPass(rpc_user, rpc_password)).unwrap();
 
-    track_utxo_set_10(&rpc_client, 831200).unwrap();
+    // track_utxo_set_10(&rpc_client, 831200).unwrap();
+    let res = txs_sort_unique_input_addrs(&rpc_client, 144008).unwrap();
+
+    for r in res {
+        println!("Transaction = {}, uses {} addresses", r.0.txid(), r.1);
+    }
 }
