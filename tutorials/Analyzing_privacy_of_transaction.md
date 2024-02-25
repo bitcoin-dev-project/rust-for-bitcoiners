@@ -5,6 +5,17 @@ for a single user one can conclude that all the inputs in the transaction belong
 to a single user. We might not able to deduce who the user is but it's clear that
 all the addresses in that partucular transaction inputs belong to a single user.
 
+More unique addresses in a transaction means an attacker can deduce that all those
+different addresses belongs to a single user, this gives the attacker an ability to
+group addresses together for single users using this heuristic.
+In most crypto exchanges because of KYC and other login details one can clearly associate
+some addresses with a known user. Now if the attacker can successfully group certain addresses
+together it means they can potentially deduce that the particular known user has at least *n* amount
+of bitcoin.
+
+The goal of the tutorial is to demonstrate how coinselection impacts the privacy of
+users in bitcoin blockchain.
+
 ## Counting number of unique addresses in a transaction using rust
 
 In our analysis we are going to fetch a block of certain height and analyze the transactions
