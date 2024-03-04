@@ -1,18 +1,18 @@
-use bitcoincore_rpc::{Client, Auth};
 use bitcoin::blockdata::transaction::OutPoint;
+use bitcoincore_rpc::{Auth, Client};
 use std::{collections::HashSet, env};
 
+mod compute_transaction_fee;
 mod privacy;
 mod utils;
 use privacy::txs_sort_unique_input_addrs;
 use utils::*;
 
-
 fn track_utxo_set_10(client: &Client, start_height: u64) -> Result<(), bitcoincore_rpc::Error> {
     let mut utxos: HashSet<OutPoint> = HashSet::new();
 
     for height in start_height..start_height + 10 {
-        let block = get_block(client, height)?;
+        let block = get_block(height, client)?;
 
         for tx in block.txdata {
             // For the first block, add all UTXOs
