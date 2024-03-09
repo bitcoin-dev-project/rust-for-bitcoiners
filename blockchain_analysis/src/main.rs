@@ -1,45 +1,12 @@
-use bitcoin::blockdata::transaction::OutPoint;
 use bitcoincore_rpc::{Auth, Client};
-use std::{collections::HashSet, env};
+use std::env;
 
 mod compute_transaction_fee;
 mod privacy;
 mod utils;
+mod build_utxo_set;
+
 use privacy::txs_sort_unique_input_addrs;
-use utils::*;
-
-fn track_utxo_set_10(client: &Client, start_height: u64) -> Result<(), bitcoincore_rpc::Error> {
-    let mut utxos: HashSet<OutPoint> = HashSet::new();
-
-    for height in start_height..start_height + 10 {
-        let block = get_block(height, client)?;
-
-        for tx in block.txdata {
-            // For the first block, add all UTXOs
-            if height == start_height {
-                for (vout_index, _) in tx.output.iter().enumerate() {
-                    let outpoint = OutPoint::new(tx.txid(), vout_index as u32);
-                    utxos.insert(outpoint);
-                }
-            } else {
-                // For subsequent blocks, update the UTXO set
-                // Remove spent outputs
-                for input in tx.input.iter() {
-                    utxos.remove(&input.previous_output);
-                }
-                // Add new outputs
-                for (vout_index, _) in tx.output.iter().enumerate() {
-                    let outpoint = OutPoint::new(tx.txid(), vout_index as u32);
-                    utxos.insert(outpoint);
-                }
-            }
-        }
-    }
-
-    dbg!("{}", utxos);
-
-    Ok(())
-}
 
 fn main() {
     // Load your local environment variables to access the bitcoin node via rpc
