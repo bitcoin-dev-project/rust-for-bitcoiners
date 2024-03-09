@@ -53,7 +53,9 @@ fn main() {
     // track_utxo_set_10(&rpc_client, 831200).unwrap();
     let res = txs_sort_unique_input_addrs(&rpc_client, 144008).unwrap();
 
-    for r in res {
+    // Displaying the top 10 transactions with greatest input addresses
+    for i in 0..10 {
+        let r = &res[i];
         println!("Transaction = {}, uses {} addresses", r.0.txid(), r.1);
     }
 }

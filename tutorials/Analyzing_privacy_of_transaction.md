@@ -75,7 +75,7 @@ fn extract_from_TxIn(input: TxIn) -> bitcoin::Address {
 // In bitcoin crate TxIn is defined like the following
 struct TxIn {
     pub previous_output: OutPoint,
-    pub script_sig: ScriptBuf, // It is not possible to extract address directly from here using current implementations
+    pub script_sig: ScriptBuf, // contains signature and public key data
     pub sequence: Sequence,
     pub witness: Witness,
 }
@@ -88,6 +88,7 @@ struct OutPoint {
     pub vout: u32,
 }
 ```
+
 
 So in order to extract address from the transaction input we have to get information
 about the transaction where the input was the output (TxOut).
