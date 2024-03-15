@@ -6,7 +6,7 @@ fn generate_subsets(n: i32) -> Vec<Vec<i32>> {
     result
 }
 
-fn backtrack(result: &mut Vec<Vec<i32>>, current: &Vec<i32>, start: i32, n: i32) {
+fn backtrack(result: &mut Vec<Vec<i32>>, current: &[i32], start: i32, n: i32) {
     // subset without the start element
     result.push(current.clone());
 
