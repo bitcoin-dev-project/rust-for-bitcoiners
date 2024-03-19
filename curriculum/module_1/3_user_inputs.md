@@ -26,8 +26,8 @@ through command line, network calls using APIs etc.,
 ## How do we read an integer input in Rust?
 
 The idea is to get the string input first and then try to decode it as *i32* for example.
-Note that not all strings can be converted to a string, so we have to do proper error handling.
-Rust compiler supports that with Option or Result types. In Pytho, Java for example we will have
+Note that not all strings can be converted to a number, so we have to do proper error handling.
+Rust compiler supports that with Option or Result types. In Python and Java, for example, we will have
 runtime exceptions. In C `atoi` function will interpret the errors as 0, this is really bad because
 0 is a valid number.
 
