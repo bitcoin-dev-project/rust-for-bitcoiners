@@ -8,7 +8,7 @@ like C++, Java etc., where variables are mutable by default.
 ```rust
 let x: i32 = 6;
 let s: &str = "abcd";
-let sString: String = String::from("abcd");
+let s_string: String = String::from("abcd");
 ```
 
 ### But why?
@@ -31,7 +31,7 @@ fn f(x: i32) -> i32 {
     return x + 1;
 }
 
-fn mut_f(mut x: i32) -> {
+fn mut_f(mut x: i32) -> i32 {
     // Now we know that variable x is "potentially" changed within this function
     // Rust compiler will generate a warning stating that x need not be mutable if
     // it was declared mutable but not being mutated.
