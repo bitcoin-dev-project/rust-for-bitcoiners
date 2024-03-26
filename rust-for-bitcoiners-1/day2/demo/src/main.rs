@@ -94,17 +94,22 @@ fn print_area_and_perimeter<T: Shape>(shape: T) {
 // Putting enums and structs together to build Linked List
 
 // Oh oh
+#[derive(Debug)]
 enum List<T> {
     Empty,
     Node {
         data: T,
-        next: Next<T>,
+        next: Box<List<T>>
     }
 }
 
-enum Next<T> {
-    Address(Box<List<T>>),
-    Nil,
+impl <T> List<T> {
+    fn empty() -> List<T> {
+        List::Empty
+    }
+    fn singleton(value: T) -> List<T> {
+        List::Node { data: value, next: Box::new(List::Empty) }
+    }
 }
 
 
