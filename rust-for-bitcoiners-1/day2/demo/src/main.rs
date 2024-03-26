@@ -10,7 +10,7 @@ enum MResult<T, E> {
 impl<T> MResult<T, ()> {
 }
 
-impl<i32, E> MResult<i32, E> {
+impl<String, E> MResult<String, E> {
 }
 
 impl<T, E> MResult<T, E> {
@@ -93,6 +93,27 @@ impl Shape for Square {
     }
 }
 
+// Crazy things
+
+// u32 is considered as a foreign type because it is not defined within this file context
+impl Shape for u32 {
+    fn area(&self) -> u32 {
+        *self * *self * 10 // Insane
+    }
+    fn perimeter(&self) -> u32 {
+        *self * 4
+    }
+}
+
+/*
+NOT Allowed
+impl u32 {
+    fn go_brr(self) -> Self {
+        self * 1000
+    }
+}
+*/
+
 fn print_area<T: Shape>(shape: T) {
     todo!()
 }
@@ -147,5 +168,10 @@ mod tests {
     fn test_list_singleton() {
         let list: List<i32> = List::singleton(1);
         assert_eq!(list, List::Node { data: 1, next: Box::new(List::Empty) });
+    }
+
+    #[test]
+    fn test_area_u32() {
+        assert_eq!(5.area(), 250);
     }
 }
