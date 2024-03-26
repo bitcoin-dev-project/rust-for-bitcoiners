@@ -7,6 +7,12 @@ enum MResult<T, E> {
     Err(E),
 }
 
+impl<T> MResult<T, ()> {
+}
+
+impl<i32, E> MResult<i32, E> {
+}
+
 impl<T, E> MResult<T, E> {
     fn ok(value: T) -> Self {
         MResult::Ok(value)
@@ -87,14 +93,18 @@ impl Shape for Square {
     }
 }
 
-fn print_area_and_perimeter<T: Shape>(shape: T) {
+fn print_area<T: Shape>(shape: T) {
     todo!()
+}
+
+fn print_perimeter(shape: &dyn Shape) {
+    println!("Perimeter: {}", shape.perimeter());
 }
 
 // Putting enums and structs together to build Linked List
 
 // Oh oh
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq)]
 enum List<T> {
     Empty,
     Node {
@@ -120,4 +130,22 @@ fn main() {
     p.lost();
     // println!("{:?}", p); Hence not Object oriented
 
+}
+
+// Write tests for List below
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_list_empty() {
+        let list: List<i32> = List::empty();
+        assert_eq!(list, List::Empty);
+    }
+
+    #[test]
+    fn test_list_singleton() {
+        let list: List<i32> = List::singleton(1);
+        assert_eq!(list, List::Node { data: 1, next: Box::new(List::Empty) });
+    }
 }
