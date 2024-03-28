@@ -15,9 +15,17 @@ struct IntList {
 // Sum and products
 
 enum Expr {
-    Integer(u32), // 256 bits -> [discriminant] [value]
+    Integer(i32), // 256 bits -> [discriminant] [value]
     Add(Box<Expr>, Box<Expr>), // 
     Sub(Box<Expr>, Box<Expr>), // 2
+}
+
+fn evaluate_expr(expr: Expr) -> i32 {
+    match expr {
+        Expr::Integer(value) => value,
+        Expr::Add(e1, e2) => evaluate_expr(*e1) + evaluate_expr(*e2),
+        Expr::Sub(e1, e2) => evaluate_expr(*e1) - evaluate_expr(*e2),
+    }
 }
 
 /*
@@ -87,15 +95,23 @@ struct Point {
 }
 
 impl Point {
+    // Associated function
+    fn new(x: i32, y: i32) -> Point {
+        Point {x, y}
+    }
+
+    // Associated method which takes the ownership of the Point value
     fn lost(self) {
         println!("point {:?} no longer exists", self);
     }
 
     // In OOP you only have the &mut self variant
+    // Associated method which takes the mutable reference of the Point value
     fn set_x(&mut self, new_x: i32) {
         self.x = new_x;
     }
 
+    // Associated method which takes the read only reference of the Point value
     fn get_y(&self) -> i32 {
         self.y
     } 
@@ -165,6 +181,9 @@ fn print_area<T: Shape>(shape: T) {
     println!("Area of the shape is {}", shape.area());
 }
 
+// for the above function the compiler will create two copies of function one for Square and the other
+// for Circle similar to what is shown below, this is one example of Zero Cost Abstraction in Rust
+
 /*
 fn print_area_square(square: Square) {
 
@@ -203,8 +222,38 @@ impl <T> List<T> {
     fn prepend(self: List<T>, value: T) -> List<T> {
         List::Node{data: value, next: Box::new(self)}
     }
+    
+    // Iterators need to be able to iterate through the structure one by one
+    // The List that we defined above do not have that feature.
+    // So create a new struct ListIterator which has a single variable whose only role
+    // is to point to nodes of the List. We implement iterator for ListIterator.
+    // The below function gives us the ListIterator which will enable use to iterate through
+    // the List one by one.
+    pub fn iter<'a>(&'a self) -> ListIterator<'a, T> {
+        ListIterator { current: self }
+    }
 }
 
+// Why lifetime parameter here needed is because the `current` field has to point
+// to node of the List and the compiler has to make sure that the reference held by
+// current is valid, i.e., the List lives longer than the ListIterator.
+pub struct ListIterator<'a, T> {
+    current: &'a List<T>,
+}
+
+impl<'a, T> Iterator for ListIterator<'a, T> {
+    type Item = &'a T;
+
+    fn next(&mut self) -> Option<Self::Item> {
+         match self.current {
+            List::Empty => None,
+            List::Node { data, next } => {
+                self.current = next; // Move the current to the next block in List
+                Some(data) // return the current value
+            },
+        }
+    }
+}
 
 fn main() {
     // println!("{:?}", MResult::<i32, String>::ok(34));
