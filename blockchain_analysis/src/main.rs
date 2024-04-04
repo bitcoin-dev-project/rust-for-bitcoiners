@@ -26,3 +26,6 @@ fn main() {
         println!("Transaction = {}, uses {} addresses", r.0.txid(), r.1);
     }
 }
+/*
+Given a block how do we find the transaction with the maximum fee?
+ */
