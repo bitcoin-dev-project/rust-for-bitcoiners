@@ -29,3 +29,15 @@ to the former.
 The same arguments holds for `Rc` type also but we can't get mutable reference to the value in the
 heap because it allows multiple references to that value, which means by the borrow checker rule
 that value cannot have a mutable reference.
+
+## Performance implications
+
+Like any other structs `Box<T>` and `Rc<T>` values are stored in stack which has a pointer variable
+which points to the value of type `T` stored in the heap.
+
+If `Box<T>` or `Rc<T>` dereferences to the address of it's struct in the stack then it means
+in order to get to the value in heap it has one additional indirection, that is we have to reach the
+structure in the stack first and then using the pointer of the structure go to the value in heap.
+
+By making the deref of these smart pointers to directly give the reference of the value stored in the
+heap rust programs achieves a much better performance with one less indirection.
