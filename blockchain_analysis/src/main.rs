@@ -5,6 +5,7 @@ mod compute_transaction_fee;
 mod privacy;
 mod utils;
 mod build_utxo_set;
+mod profiling_transactions;
 
 use privacy::txs_sort_unique_input_addrs;
 

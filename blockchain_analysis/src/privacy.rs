@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-use bitcoin::{Address, Network, Transaction};
+use bitcoin::{Address, Network, Transaction, Block};
 use bitcoincore_rpc::{Client, RpcApi};
 
 use crate::utils::*;
