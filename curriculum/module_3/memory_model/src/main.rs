@@ -1,3 +1,4 @@
+#![allow(unused)]
 use std::rc::Rc;
 
 struct Person {
@@ -51,3 +52,33 @@ fn main() {
 }
 
 // Why rust restricts that at any point there can be only one mutable reference?
+
+// Deref Trait demonstration
+
+fn deref_coersion(v: &String) {
+    // Do something
+}
+
+fn derefmut_coersion(v: &mut String) {
+    // Do something
+}
+
+fn deref(v: &Box<String>) {
+    // Do Something
+}
+
+fn derefmut(v: &mut Box<String>) {
+    // Do Something
+}
+
+fn deref_demo() {
+    let ex: String = "example".to_string();
+    let a: Box<String> = Box::new(ex);
+    deref_coersion(&a);
+    deref(&a);
+
+    let mut ex: String = "example".to_string();
+    let mut a: Box<String> = Box::new(ex);
+    derefmut_coersion(&mut a);
+    derefmut(&mut a);
+}

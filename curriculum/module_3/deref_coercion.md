@@ -8,6 +8,7 @@ smart pointer types `Box` and `Rc`.
 `Box` implements both `Deref` and `DerefMut` because Box only have a single pointer to the
 value in the heap.
 Specifically `Box<T>` implements `Deref<Target=T>` and `DerefMut<Target=T>`. which means
+`&Box<T>`, `&mut Box<T>` can be coerced into `&T` and `&mut T`.
 
 ```rust
 let mut a = Box::new(65 as i32);
@@ -17,14 +18,37 @@ let c: &mut i32 = &mut a;
 
 the above snippet is a valid Rust code.
 
-What also means is that let's say we are working with a collection for example `HashSet<Box<T>>`,
-which has the following method,
+More examples,
 
 ```rust
-pub fn contains<T>(&self, value: &T) -> bool
+fn deref_coersion(v: &String) {
+    // Do something
+}
+
+fn derefmut_coersion(v: &mut String) {
+    // Do something
+}
+
+fn deref(v: &Box<String>) {
+    // Do Something
+}
+
+fn derefmut(v: &mut Box<String>) {
+    // Do Something
+}
+
+fn deref_demo() {
+    let ex: String = "example".to_string();
+    let a: Box<String> = Box::new(ex);
+    deref_coersion(&a);
+    deref(&a);
+
+    let mut ex: String = "example".to_string();
+    let mut a: Box<String> = Box::new(ex);
+    derefmut_coersion(&mut a);
+    derefmut(&mut a);
+}
 ```
-the contains method is actually looking for `&T` and not `&Box<T>` because it automatically coerces
-to the former.
 
 The same arguments holds for `Rc` type also but we can't get mutable reference to the value in the
 heap because it allows multiple references to that value, which means by the borrow checker rule
