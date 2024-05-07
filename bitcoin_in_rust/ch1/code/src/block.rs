@@ -2,8 +2,13 @@
 
 use std::collections::LinkedList as List;
 
+struct BlockChain {
+    blocks: List<Block>
+}
+
 struct Block {
     hash: String,
+    id: u128,
     transactions: List<Transaction>,
 }
 
@@ -20,11 +25,8 @@ struct TxIn {
 
 struct TxOut {
     public_address: String,
-    satoshis: u64, // 1 btc = 10^8 satoshis, in total 10^8 * 21 * 10^6 = 2.1 * 10^15
+    satoshis: u64, 
+    // 1 btc = 10^8 satoshis, in total 10^8 * 21 * 10^6 = 2.1 * 10^15
     // maximum value of u64 is greater than 10^19
     // so u64 is enough to store all valid satoshis
-}
-
-struct BlockChain {
-    blocks: List<Block>,
 }
