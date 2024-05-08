@@ -11,8 +11,10 @@ struct SimpleHash {
 impl SimpleHash {
     fn new() -> Self {
         SimpleHash {
-            state: [0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a,
-                    0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19],
+            state: [
+                0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 0x510e527f, 0x9b05688c, 0x1f83d9ab,
+                0x5be0cd19,
+            ],
             block: [0; BLOCK_SIZE],
             block_len: 0,
             length: 0,
@@ -24,7 +26,8 @@ impl SimpleHash {
         while i < data.len() {
             let remaining = BLOCK_SIZE - self.block_len;
             let copy_len = std::cmp::min(data.len() - i, remaining);
-            self.block[self.block_len..self.block_len + copy_len].copy_from_slice(&data[i..i + copy_len]);
+            self.block[self.block_len..self.block_len + copy_len]
+                .copy_from_slice(&data[i..i + copy_len]);
             self.block_len += copy_len;
             self.length += copy_len as u64;
             i += copy_len;

@@ -21,6 +21,7 @@ struct Transaction {
 struct TxIn {
     prev_txid: String,
     out: usize,
+    signature: String, // to spend the output
 }
 
 struct TxOut {
