@@ -34,3 +34,5 @@ of inputs will produce outputs that are evenly distributed and apparently random
 
 9. **Anti-Tamper Mechanisms**:
    - Software and hardware can use hash functions to detect unauthorized modifications. A valid hash on the system ensures that it has not been tampered with.
+
+
