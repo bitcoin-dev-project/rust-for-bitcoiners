@@ -36,43 +36,51 @@ programming language relies on some version of malloc to do memory allocation.
 ### Module 1
 
 Introduction to Rust, loops, arrays, integers, functions.
+
 **Assignment**: Ceasar Cypher
 
 ### Module 2
 
 Method Syntax, Traits, BigUint using elliptic curve cryptography.
 Demonstration of a naive hashing algorithm using xor.
+
 **Assignment**: Implement your own hashing algorithm
 
 ### Module 3
 
 Enums and pattern matching with Result and Linked List type.
+
 **Assignment**: Build your own bitcoin
 
 ### Module 4
 
 Introduction to `bitcoincorerpc` and `bitcoin` crates.
+
 **Assignment**: Interacting with bitcoin node and getting used to working with Result and Option
 
 ### Module 5
 
 Demonstration of crates like `sha256d`, `secp256k1`, `bitcoin` and  `serde` by creating a signed 
 transaction, parsing transaction data from text files and verifying their signatures.
+
 **Assignment**: Given a list of transactions mine a new block.
 
 ### Module 6
 
 Memory allocation in depth by building a graph data structure using Rust.
+
 **Assignment**: Bitcoin blockchain privacy analysis by linking transactions using graph datastructure.
 
 ### Module 7
 
 Introduction to parallel programming in Rust.
+
 **Assignment**: TODO
 
 ### Module 8
 
 Introduction to asynchronous programming using `tokio`.
+
 **Assignment**: Communicate with bitcoin nodes by sending valid messages, might include bip324 here.
 
 ## What is the outcome of the course?
