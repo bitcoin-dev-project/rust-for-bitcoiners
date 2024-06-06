@@ -15,8 +15,11 @@ This was organised and funded by Chaincode.
 
 * [curriculum](./curriculum/)
 
-This is where I write down tutorials to understand rust programming language from
-my perspective.
+This is a section which tries to explain core rust topics and concepts concisely.
+It contains a list of modules and each module has a list of topics.
+These are the reading materials for the students to go through before they appear for the live class.
+Students will be allocated certain topics and questions and are expected to explain those to their
+fellow students clearly.
 
 * [bitcoin_in_rust](./bitcoin_in_rust/)
 
@@ -37,8 +40,7 @@ bitcoin related crates.
 
 * [tutorials](./tutorials/)
 
-Here I explain in depth how to implement bitcoin related things in rust. For example,
-it contains tutorials on how I created certain functionalities in [blockchain_analysis](./blockchain_analysis/).
+This section contains how to do specific bitcoin related activities using rust.
 
 * [cmd_wallet](//cmd_wallet/)
 

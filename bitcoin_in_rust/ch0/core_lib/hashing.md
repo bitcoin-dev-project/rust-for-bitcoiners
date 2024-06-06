@@ -31,8 +31,17 @@ of inputs will produce outputs that are evenly distributed and apparently random
 
 8. **Deduplication**:
    - In storage systems, hash functions can identify duplicate data blocks and thus reduce the amount of storage needed by only keeping one copy of identical data blocks.
-
+election
 9. **Anti-Tamper Mechanisms**:
    - Software and hardware can use hash functions to detect unauthorized modifications. A valid hash on the system ensures that it has not been tampered with.
 
+## Commitment
 
+Especially in bitcoin Hashing is used to establish a commitment.
+**Example 1** P2SH where the hash of the Script is stored in the `TxOut` rather than the entire
+script, so that the fee of having that specialized spending condition has to be paid by the
+receiver who needs that spending condition in first place.
+
+**Example 2** A coin in bitcoin is a UTXO which is a chain of transactions and this chain
+is established because of how `TxId`s are chained. A `TxId` is just the  hash of the transaction
+and it is included in `TxIn` of every transaction.
