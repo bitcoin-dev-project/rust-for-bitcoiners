@@ -92,3 +92,7 @@ mod tests {
         println!("{:?}", xor_hash(&attack));
     }
 }
+
+fn main() {
+    println!("Hello, world!");
+}
