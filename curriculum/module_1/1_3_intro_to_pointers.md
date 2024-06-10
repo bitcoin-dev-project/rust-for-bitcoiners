@@ -1,13 +1,16 @@
-# Pointers point to memory location
+# Introduction to Pointers
+
+## You might've worked with pointers before
 
 The concept of pointers are unique to languages like C, C++, Rust etc., which
 gives explicit control to how the values are laid out in memory.
 In object oriented programming languages like Java, Scala, Python etc., every variable
 stores the address of the object(value) which will be laid out in heap memory, and they
 are called reference variables.
-But pointers in Rust are much more powerful than that and are difficult to implement them
-correctly. But Rust compiler with it's powerful type system makes it easier for us to write
-memory efficient code.
+
+## Definition of a pointer
+
+A pointer is a variable which can store the address of a variable or value.
 
 *Examples*
 ```rust
@@ -26,6 +29,9 @@ let p = Point {
 }
 let q = &p; // requires only 64 bits to store in memory of 64 bit architecture
 ```
+
+In short every pointer variable of arbitrary types requires only 64 bits to be stored
+in 64 bit architecture.
 
 In computer memory every byte has a unique address. The address of a variable refers
 to the first byte of the value of that variable in memory.
@@ -46,3 +52,10 @@ etc., without copying them every time, which leads to performance benefits but c
 cost of race conditions, hard to read and manage state across various function calls and threads
 et., But again with Rust's powerful type system it is easier to write safe, correct, performant code
 using pointers.
+
+## Rust specific clarifications
+
+The pointers that we have discussed so far are called shared references, which are **Thin pointers**.
+Because they are compiled in a way that they only store the address of a value.
+There are other kinds of pointers like smart pointers, fat pointers etc., which we will cover later
+in the course.

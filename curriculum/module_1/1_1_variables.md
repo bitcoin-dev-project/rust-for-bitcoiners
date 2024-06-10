@@ -39,3 +39,20 @@ fn mut_f(mut x: i32) -> i32 {
     return x;
 }
 ```
+
+These problems are profound when working with shared objects/variables as shown in the example
+below,
+
+```rust
+struct Point {
+    x: i32,
+    y: i32,
+}
+fn mut_shared_point(p: &mut Point) {
+    p.x += 50;
+}
+```
+
+In the above example the caller of the `mut_shared_point` function should be aware that the
+point whose reference is being passed to might change, so this affects how the programmer thinks
+about the lines of code which comes after that function call.
