@@ -1,0 +1,53 @@
+{
+  "txid": "deb4b9b0fe5924bae3e6a8c3619aca9563efd69fdcbcc40cb7bcf7edb96ecbde",
+  "version": 2,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "135eea4e80ebe1306f68e3cf35e83ae281ee39ed08986f69ac0cc413389b9769",
+      "vout": 1,
+      "prevout": {
+        "scriptpubkey": "a914ba158beb3c25105542d006ac6a3428044ed7d94587",
+        "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 ba158beb3c25105542d006ac6a3428044ed7d945 OP_EQUAL",
+        "scriptpubkey_type": "p2sh",
+        "scriptpubkey_address": "3JewRJfLp6hSGPf3Vyna8k7CnSWFks2SBe",
+        "value": 266895
+      },
+      "scriptsig": "16001471566b328ad66945801ff84d7b4cbdccd6fcb8b5",
+      "scriptsig_asm": "OP_PUSHBYTES_22 001471566b328ad66945801ff84d7b4cbdccd6fcb8b5",
+      "witness": [
+        "304402204831238d10ee0dbcc86d9f1c205d18e7574dfda5caee5c696beefe93898ceeb80220455f05701d6ee738d61c604b885b12561a1e1fbf46f056b69d565d0df35393de01",
+        "03f4535d38906e1a9d464662280e06937a53290772ad33e760d3f20b43ad4b3fba"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967295,
+      "inner_redeemscript_asm": "OP_0 OP_PUSHBYTES_20 71566b328ad66945801ff84d7b4cbdccd6fcb8b5"
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "51209401c9d09934da3197321178f55a6ebbecc363be68e02a16bdda373e0629c4a0",
+      "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 9401c9d09934da3197321178f55a6ebbecc363be68e02a16bdda373e0629c4a0",
+      "scriptpubkey_type": "v1_p2tr",
+      "scriptpubkey_address": "bc1pjsqun5yexndrr9ejz9u02knwh0kvxca7drsz594amgmnup3fcjsqhvtlrc",
+      "value": 78575
+    },
+    {
+      "scriptpubkey": "a914ba158beb3c25105542d006ac6a3428044ed7d94587",
+      "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 ba158beb3c25105542d006ac6a3428044ed7d945 OP_EQUAL",
+      "scriptpubkey_type": "p2sh",
+      "scriptpubkey_address": "3JewRJfLp6hSGPf3Vyna8k7CnSWFks2SBe",
+      "value": 185665
+    }
+  ],
+  "size": 258,
+  "weight": 705,
+  "fee": 2655,
+  "status": {
+    "confirmed": true,
+    "block_height": 834638,
+    "block_hash": "000000000000000000025f742c626208ac87e0b7d15054abb4a19ca2d735a54e",
+    "block_time": 1710405325
+  },
+  "hex": "0200000000010169979b3813c40cac696f9808ed39ee81e23ae835cfe3686f30e1eb804eea5e13010000001716001471566b328ad66945801ff84d7b4cbdccd6fcb8b5ffffffff02ef320100000000002251209401c9d09934da3197321178f55a6ebbecc363be68e02a16bdda373e0629c4a041d502000000000017a914ba158beb3c25105542d006ac6a3428044ed7d945870247304402204831238d10ee0dbcc86d9f1c205d18e7574dfda5caee5c696beefe93898ceeb80220455f05701d6ee738d61c604b885b12561a1e1fbf46f056b69d565d0df35393de012103f4535d38906e1a9d464662280e06937a53290772ad33e760d3f20b43ad4b3fba00000000"
+}

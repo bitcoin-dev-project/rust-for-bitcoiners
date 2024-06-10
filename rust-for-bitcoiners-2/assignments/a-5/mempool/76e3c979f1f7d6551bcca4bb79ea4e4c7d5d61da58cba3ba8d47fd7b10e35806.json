@@ -1,0 +1,62 @@
+{
+  "txid": "76e3c979f1f7d6551bcca4bb79ea4e4c7d5d61da58cba3ba8d47fd7b10e35806",
+  "version": 2,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "1f10b27da62f5493a2f2d57acc5e884ebda846506219f13845a33e89f5a7cd78",
+      "vout": 1,
+      "prevout": {
+        "scriptpubkey": "5120e9530270cff857539cbca6a68d5b01880a58307066f673bf1c7e512c91ce51d1",
+        "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 e9530270cff857539cbca6a68d5b01880a58307066f673bf1c7e512c91ce51d1",
+        "scriptpubkey_type": "v1_p2tr",
+        "scriptpubkey_address": "bc1pa9fsyux0lpt4889u56ng6kcp3q99svrsvmm880cu0egjeyww28gstqcw9y",
+        "value": 54543
+      },
+      "scriptsig": "",
+      "scriptsig_asm": "",
+      "witness": [
+        "27219e0ce94f8338ef7a3395039cfbbaf882cfa48af1690a547279d378b280dd655e42e7966375aa872dda01769b031d8571cb2716f848b99fc8738a00b23605"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967295
+    },
+    {
+      "txid": "4ba8cebe80efed1f42a467a759b0c48a73a9209a19b201ba0f2550590467388e",
+      "vout": 1,
+      "prevout": {
+        "scriptpubkey": "5120e9530270cff857539cbca6a68d5b01880a58307066f673bf1c7e512c91ce51d1",
+        "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 e9530270cff857539cbca6a68d5b01880a58307066f673bf1c7e512c91ce51d1",
+        "scriptpubkey_type": "v1_p2tr",
+        "scriptpubkey_address": "bc1pa9fsyux0lpt4889u56ng6kcp3q99svrsvmm880cu0egjeyww28gstqcw9y",
+        "value": 10573
+      },
+      "scriptsig": "",
+      "scriptsig_asm": "",
+      "witness": [
+        "e88ec8118fab2c4c923faf7675373949a3a164b640c63e987d6da564f8ee508f292824c03904a3b6c46cbb49b4924703fa01e008be975c87b0bc889d84b0cf48"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "76a9141d31c406a5ea39b8accd559c2368a8aeb18e769788ac",
+      "scriptpubkey_asm": "OP_DUP OP_HASH160 OP_PUSHBYTES_20 1d31c406a5ea39b8accd559c2368a8aeb18e7697 OP_EQUALVERIFY OP_CHECKSIG",
+      "scriptpubkey_type": "p2pkh",
+      "scriptpubkey_address": "13fNDM6CoERTjjXzfQhegJFVEmZXhefv7s",
+      "value": 62396
+    }
+  ],
+  "size": 260,
+  "weight": 638,
+  "fee": 2720,
+  "status": {
+    "confirmed": true,
+    "block_height": 834460,
+    "block_hash": "00000000000000000000484a79b643b2524bbce82e5d8a442013fa5b8905ed98",
+    "block_time": 1710307468
+  },
+  "hex": "0200000000010278cda7f5893ea34538f119625046a8bd4e885ecc7ad5f2a293542fa67db2101f0100000000ffffffff8e3867045950250fba01b2199a20a9738ac4b059a767a4421fedef80becea84b0100000000ffffffff01bcf30000000000001976a9141d31c406a5ea39b8accd559c2368a8aeb18e769788ac014027219e0ce94f8338ef7a3395039cfbbaf882cfa48af1690a547279d378b280dd655e42e7966375aa872dda01769b031d8571cb2716f848b99fc8738a00b236050140e88ec8118fab2c4c923faf7675373949a3a164b640c63e987d6da564f8ee508f292824c03904a3b6c46cbb49b4924703fa01e008be975c87b0bc889d84b0cf4800000000"
+}

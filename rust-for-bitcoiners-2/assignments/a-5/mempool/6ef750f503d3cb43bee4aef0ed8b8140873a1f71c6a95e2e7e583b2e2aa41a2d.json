@@ -1,0 +1,73 @@
+{
+  "txid": "6ef750f503d3cb43bee4aef0ed8b8140873a1f71c6a95e2e7e583b2e2aa41a2d",
+  "version": 2,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "8d006b1509ff2c5a93e94691f57e15b741a3b04118e8584fb94cada86320e697",
+      "vout": 0,
+      "prevout": {
+        "scriptpubkey": "51208be5627b02e489f353490768101ab2c9969bab09d0579e5e7ffa6b7d0526cc83",
+        "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 8be5627b02e489f353490768101ab2c9969bab09d0579e5e7ffa6b7d0526cc83",
+        "scriptpubkey_type": "v1_p2tr",
+        "scriptpubkey_address": "bc1p30jky7czujylx56fqa5pqx4jextfh2cf6pteuhnllf4h6pfxejpssag0gn",
+        "value": 546
+      },
+      "scriptsig": "",
+      "scriptsig_asm": "",
+      "witness": [
+        "09dd7117039dabd2b9ebf790e43c5085283f9f9ef635a0ed0bb5aa09e21eae09c4da3a3b219744b432f5714d276b7b1a565ef16a8086d7c8652414d4c0a6762a",
+        "20309f0974b637663823484fb57f4adee21227a93993a7a8f9171a6ebaeb11d79fac",
+        "c093674766caa3db9c0f63c4b74f302510c509d6d0ffac9d67214d8f03cb2ed27a201dc69ca4ce84ae51a9f50d35e1a31521ada241ef51fe01c533a14726fe048c"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967295
+    },
+    {
+      "txid": "b733743c5efc3c028564834fdba2690e44a9e1f8488cecdb7192f6dbdcd819c1",
+      "vout": 2,
+      "prevout": {
+        "scriptpubkey": "a914b09900cafe5ba256926a5756f2ce428c8a02aee987",
+        "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 b09900cafe5ba256926a5756f2ce428c8a02aee9 OP_EQUAL",
+        "scriptpubkey_type": "p2sh",
+        "scriptpubkey_address": "3Hnn99WQUWi1wWWRWu7CkX1sQ1EoUVudfX",
+        "value": 1434410
+      },
+      "scriptsig": "16001461a1db69c1df3bd29769c53438a6dc964f8c6eaf",
+      "scriptsig_asm": "OP_PUSHBYTES_22 001461a1db69c1df3bd29769c53438a6dc964f8c6eaf",
+      "witness": [
+        "304402201d654e0a7d29d5103f4b72ab069a4ea8a6a3019534438617aa79cfa4580dd83302202796d0f187ccdd95cc83283663529b9a5490a199fcf0e99a6427605bbbd44b7e01",
+        "026ab5399ca7488c655181524394c3548b25ddc807cff8031aa995be80e4a0162b"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967295,
+      "inner_redeemscript_asm": "OP_0 OP_PUSHBYTES_20 61a1db69c1df3bd29769c53438a6dc964f8c6eaf"
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "512065e10c45b92a93ecacc55d3e8f9800219cf6dc149b07b03fb144bbfc1f12a8f1",
+      "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 65e10c45b92a93ecacc55d3e8f9800219cf6dc149b07b03fb144bbfc1f12a8f1",
+      "scriptpubkey_type": "v1_p2tr",
+      "scriptpubkey_address": "bc1pvhssc3de92f7etx9t5lglxqqyxw0dhq5nvrmq0a3gjalc8cj4rcsvnalgc",
+      "value": 546
+    },
+    {
+      "scriptpubkey": "a914b09900cafe5ba256926a5756f2ce428c8a02aee987",
+      "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 b09900cafe5ba256926a5756f2ce428c8a02aee9 OP_EQUAL",
+      "scriptpubkey_type": "p2sh",
+      "scriptpubkey_address": "3Hnn99WQUWi1wWWRWu7CkX1sQ1EoUVudfX",
+      "value": 1430640
+    }
+  ],
+  "size": 466,
+  "weight": 1036,
+  "fee": 3770,
+  "status": {
+    "confirmed": true,
+    "block_height": 834638,
+    "block_hash": "000000000000000000025f742c626208ac87e0b7d15054abb4a19ca2d735a54e",
+    "block_time": 1710405325
+  },
+  "hex": "0200000000010297e62063a8ad4cb94f58e81841b0a341b7157ef59146e9935a2cff09156b008d0000000000ffffffffc119d8dcdbf69271dbec8c48f8e1a9440e69a2db4f836485023cfc5e3c7433b7020000001716001461a1db69c1df3bd29769c53438a6dc964f8c6eafffffffff02220200000000000022512065e10c45b92a93ecacc55d3e8f9800219cf6dc149b07b03fb144bbfc1f12a8f170d415000000000017a914b09900cafe5ba256926a5756f2ce428c8a02aee987034009dd7117039dabd2b9ebf790e43c5085283f9f9ef635a0ed0bb5aa09e21eae09c4da3a3b219744b432f5714d276b7b1a565ef16a8086d7c8652414d4c0a6762a2220309f0974b637663823484fb57f4adee21227a93993a7a8f9171a6ebaeb11d79fac41c093674766caa3db9c0f63c4b74f302510c509d6d0ffac9d67214d8f03cb2ed27a201dc69ca4ce84ae51a9f50d35e1a31521ada241ef51fe01c533a14726fe048c0247304402201d654e0a7d29d5103f4b72ab069a4ea8a6a3019534438617aa79cfa4580dd83302202796d0f187ccdd95cc83283663529b9a5490a199fcf0e99a6427605bbbd44b7e0121026ab5399ca7488c655181524394c3548b25ddc807cff8031aa995be80e4a0162b00000000"
+}

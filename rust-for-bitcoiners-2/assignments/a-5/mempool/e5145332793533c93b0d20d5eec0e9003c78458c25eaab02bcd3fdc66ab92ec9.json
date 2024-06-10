@@ -1,0 +1,41 @@
+{
+  "txid": "e5145332793533c93b0d20d5eec0e9003c78458c25eaab02bcd3fdc66ab92ec9",
+  "version": 1,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "32670d2c4a062dedff0ce0753fa5ae4a866d7edc39723b15b7817da105c01d8e",
+      "vout": 1,
+      "prevout": {
+        "scriptpubkey": "76a9145742d3433d3ae05fcaf050ca8c7f3d4608d0a7a888ac",
+        "scriptpubkey_asm": "OP_DUP OP_HASH160 OP_PUSHBYTES_20 5742d3433d3ae05fcaf050ca8c7f3d4608d0a7a8 OP_EQUALVERIFY OP_CHECKSIG",
+        "scriptpubkey_type": "p2pkh",
+        "scriptpubkey_address": "18xPqnk24rdjRg83VxH7aysgBYqqH1J9QN",
+        "value": 14048
+      },
+      "scriptsig": "483045022100a57a557e1db856846d7abdf5de2b3a8cd89376ab50b0d0ebf4850320c251283d02204bce663a6c6c4f9854b70204c485a9b39886684b52b6a0d4f84f1f7caa70744a0121029c9c2ddda3d8af524c49b4748d558314509d7e58bc295789ebc344ea1414d38a",
+      "scriptsig_asm": "OP_PUSHBYTES_72 3045022100a57a557e1db856846d7abdf5de2b3a8cd89376ab50b0d0ebf4850320c251283d02204bce663a6c6c4f9854b70204c485a9b39886684b52b6a0d4f84f1f7caa70744a01 OP_PUSHBYTES_33 029c9c2ddda3d8af524c49b4748d558314509d7e58bc295789ebc344ea1414d38a",
+      "is_coinbase": false,
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "00149137cac1e960a9072f049f861d61112112a58d65",
+      "scriptpubkey_asm": "OP_0 OP_PUSHBYTES_20 9137cac1e960a9072f049f861d61112112a58d65",
+      "scriptpubkey_type": "v0_p2wpkh",
+      "scriptpubkey_address": "bc1qjymu4s0fvz5swtcyn7rp6cg3yyf2trt9ldygwc",
+      "value": 10208
+    }
+  ],
+  "size": 189,
+  "weight": 756,
+  "fee": 3840,
+  "status": {
+    "confirmed": true,
+    "block_height": 834638,
+    "block_hash": "000000000000000000025f742c626208ac87e0b7d15054abb4a19ca2d735a54e",
+    "block_time": 1710405325
+  },
+  "hex": "01000000018e1dc005a17d81b7153b7239dc7e6d864aaea53f75e00cffed2d064a2c0d6732010000006b483045022100a57a557e1db856846d7abdf5de2b3a8cd89376ab50b0d0ebf4850320c251283d02204bce663a6c6c4f9854b70204c485a9b39886684b52b6a0d4f84f1f7caa70744a0121029c9c2ddda3d8af524c49b4748d558314509d7e58bc295789ebc344ea1414d38affffffff01e0270000000000001600149137cac1e960a9072f049f861d61112112a58d6500000000"
+}

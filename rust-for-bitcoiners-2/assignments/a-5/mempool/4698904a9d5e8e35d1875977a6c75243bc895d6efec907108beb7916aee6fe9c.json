@@ -1,0 +1,48 @@
+{
+  "txid": "4698904a9d5e8e35d1875977a6c75243bc895d6efec907108beb7916aee6fe9c",
+  "version": 1,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "3cef03c22a46afffa3700f7d87de3f55544eebb5986d46a5bf7007990911a792",
+      "vout": 1,
+      "prevout": {
+        "scriptpubkey": "76a9140ef45fdb4e7ac6e538b0ee53265d2fee847d9f1288ac",
+        "scriptpubkey_asm": "OP_DUP OP_HASH160 OP_PUSHBYTES_20 0ef45fdb4e7ac6e538b0ee53265d2fee847d9f12 OP_EQUALVERIFY OP_CHECKSIG",
+        "scriptpubkey_type": "p2pkh",
+        "scriptpubkey_address": "12N5D7ve8zGDAijZD77ezuKCPap2aUpyoY",
+        "value": 614563
+      },
+      "scriptsig": "483045022100a7a1e4f8e7e6e928dbafa271625c19ee3e444135ed5fcc50caab59241ff4effc02203779eaf48f189565549f06eaf3c2d8033c43200dce0af717da0858f3884226290121026aaff2b30448b899eeedb0fcd8940eb7c00163c0de9a7df43db8da544cb58e7f",
+      "scriptsig_asm": "OP_PUSHBYTES_72 3045022100a7a1e4f8e7e6e928dbafa271625c19ee3e444135ed5fcc50caab59241ff4effc02203779eaf48f189565549f06eaf3c2d8033c43200dce0af717da0858f38842262901 OP_PUSHBYTES_33 026aaff2b30448b899eeedb0fcd8940eb7c00163c0de9a7df43db8da544cb58e7f",
+      "is_coinbase": false,
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "0014f9749d59edc122a3953c859cb50eb3a12bb74baf",
+      "scriptpubkey_asm": "OP_0 OP_PUSHBYTES_20 f9749d59edc122a3953c859cb50eb3a12bb74baf",
+      "scriptpubkey_type": "v0_p2wpkh",
+      "scriptpubkey_address": "bc1ql96f6k0dcy3289fuskwt2r4n5y4mwja0yhj3fr",
+      "value": 1374
+    },
+    {
+      "scriptpubkey": "76a9140ef45fdb4e7ac6e538b0ee53265d2fee847d9f1288ac",
+      "scriptpubkey_asm": "OP_DUP OP_HASH160 OP_PUSHBYTES_20 0ef45fdb4e7ac6e538b0ee53265d2fee847d9f12 OP_EQUALVERIFY OP_CHECKSIG",
+      "scriptpubkey_type": "p2pkh",
+      "scriptpubkey_address": "12N5D7ve8zGDAijZD77ezuKCPap2aUpyoY",
+      "value": 608729
+    }
+  ],
+  "size": 223,
+  "weight": 892,
+  "fee": 4460,
+  "status": {
+    "confirmed": true,
+    "block_height": 834638,
+    "block_hash": "000000000000000000025f742c626208ac87e0b7d15054abb4a19ca2d735a54e",
+    "block_time": 1710405325
+  },
+  "hex": "010000000192a71109990770bfa5466d98b5eb4e54553fde877d0f70a3ffaf462ac203ef3c010000006b483045022100a7a1e4f8e7e6e928dbafa271625c19ee3e444135ed5fcc50caab59241ff4effc02203779eaf48f189565549f06eaf3c2d8033c43200dce0af717da0858f3884226290121026aaff2b30448b899eeedb0fcd8940eb7c00163c0de9a7df43db8da544cb58e7fffffffff025e05000000000000160014f9749d59edc122a3953c859cb50eb3a12bb74bafd9490900000000001976a9140ef45fdb4e7ac6e538b0ee53265d2fee847d9f1288ac00000000"
+}

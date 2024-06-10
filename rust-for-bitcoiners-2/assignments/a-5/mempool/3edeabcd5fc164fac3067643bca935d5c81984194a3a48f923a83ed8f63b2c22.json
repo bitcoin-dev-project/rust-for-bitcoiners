@@ -1,0 +1,71 @@
+{
+  "txid": "3edeabcd5fc164fac3067643bca935d5c81984194a3a48f923a83ed8f63b2c22",
+  "version": 2,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "173a85542a577f34d1731310d94a58e0ecbb7538c84ba021c18aa780d651c7f0",
+      "vout": 1,
+      "prevout": {
+        "scriptpubkey": "51209cc2bb36bd2a7c823818edf6cdecd62e6ca9fa85af0943682c6287ab43ab4049",
+        "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 9cc2bb36bd2a7c823818edf6cdecd62e6ca9fa85af0943682c6287ab43ab4049",
+        "scriptpubkey_type": "v1_p2tr",
+        "scriptpubkey_address": "bc1pnnptkd4a9f7gywqcahmvmmxk9ek2n7594uy5x6pvv2r6ksatgpys6urxk8",
+        "value": 546
+      },
+      "scriptsig": "",
+      "scriptsig_asm": "",
+      "witness": [
+        "cd1da78c2a37acf0ee0e59413d40c424f1fce59449c4fb40687704d199af7442ca178d72dfda265b8f42ed3fca89be94684c7332d236f96bccb5a81dd7a03eed",
+        "20e8fa1365a752f83c2af2295c86992fb88ba82aaf53ded9b9e2345e93acacda3aac064579ffea8701750063036f7264010118746578742f706c61696e3b636861727365743d7574662d3800407b2270223a226272632d3230222c226f70223a227472616e73666572222c227469636b223a2273617473222c22616d74223a223438373337363432363938227d68",
+        "c1a9856866d6fd6d52e378b6de3bc6a8b63d1d3e5953169272d8eac9068cf13789"
+      ],
+      "is_coinbase": false,
+      "sequence": 0
+    },
+    {
+      "txid": "6a3b12d00db32674cab858ee27b580c09e02941353a535d19307300f49856f45",
+      "vout": 1,
+      "prevout": {
+        "scriptpubkey": "5120e8fa1365a752f83c2af2295c86992fb88ba82aaf53ded9b9e2345e93acacda3a",
+        "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 e8fa1365a752f83c2af2295c86992fb88ba82aaf53ded9b9e2345e93acacda3a",
+        "scriptpubkey_type": "v1_p2tr",
+        "scriptpubkey_address": "bc1parapxed82turc2hj99wgdxf0hz96s240200dnw0zx30f8t9vmgaql98ha0",
+        "value": 347717
+      },
+      "scriptsig": "",
+      "scriptsig_asm": "",
+      "witness": [
+        "48cf27197850397865b74742ec3c839b210aaa900691d24e5944d610b28cfae0515fd20791a71fb208ae9fce11c0a976b100f13969b3dae42ea91397ed501e00"
+      ],
+      "is_coinbase": false,
+      "sequence": 0
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "76a91439afaaec0d713a074b3cecb00b4dcf9e5d80833d88ac",
+      "scriptpubkey_asm": "OP_DUP OP_HASH160 OP_PUSHBYTES_20 39afaaec0d713a074b3cecb00b4dcf9e5d80833d OP_EQUALVERIFY OP_CHECKSIG",
+      "scriptpubkey_type": "p2pkh",
+      "scriptpubkey_address": "16G1xYBbiNG78LSuZdMqp6tux5xvVp9Wxh",
+      "value": 546
+    },
+    {
+      "scriptpubkey": "5120e8fa1365a752f83c2af2295c86992fb88ba82aaf53ded9b9e2345e93acacda3a",
+      "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 e8fa1365a752f83c2af2295c86992fb88ba82aaf53ded9b9e2345e93acacda3a",
+      "scriptpubkey_type": "v1_p2tr",
+      "scriptpubkey_address": "bc1parapxed82turc2hj99wgdxf0hz96s240200dnw0zx30f8t9vmgaql98ha0",
+      "value": 339824
+    }
+  ],
+  "size": 480,
+  "weight": 987,
+  "fee": 7893,
+  "status": {
+    "confirmed": true,
+    "block_height": 834638,
+    "block_hash": "000000000000000000025f742c626208ac87e0b7d15054abb4a19ca2d735a54e",
+    "block_time": 1710405325
+  },
+  "hex": "02000000000102f0c751d680a78ac121a04bc83875bbece0584ad9101373d1347f572a54853a17010000000000000000456f85490f300793d135a5531394029ec080b527ee58b8ca7426b30dd0123b6a0100000000000000000222020000000000001976a91439afaaec0d713a074b3cecb00b4dcf9e5d80833d88ac702f050000000000225120e8fa1365a752f83c2af2295c86992fb88ba82aaf53ded9b9e2345e93acacda3a0340cd1da78c2a37acf0ee0e59413d40c424f1fce59449c4fb40687704d199af7442ca178d72dfda265b8f42ed3fca89be94684c7332d236f96bccb5a81dd7a03eed8e20e8fa1365a752f83c2af2295c86992fb88ba82aaf53ded9b9e2345e93acacda3aac064579ffea8701750063036f7264010118746578742f706c61696e3b636861727365743d7574662d3800407b2270223a226272632d3230222c226f70223a227472616e73666572222c227469636b223a2273617473222c22616d74223a223438373337363432363938227d6821c1a9856866d6fd6d52e378b6de3bc6a8b63d1d3e5953169272d8eac9068cf13789014048cf27197850397865b74742ec3c839b210aaa900691d24e5944d610b28cfae0515fd20791a71fb208ae9fce11c0a976b100f13969b3dae42ea91397ed501e0000000000"
+}

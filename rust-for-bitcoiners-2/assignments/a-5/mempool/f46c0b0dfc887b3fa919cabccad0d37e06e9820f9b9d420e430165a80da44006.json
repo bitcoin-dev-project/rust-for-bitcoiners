@@ -1,0 +1,52 @@
+{
+  "txid": "f46c0b0dfc887b3fa919cabccad0d37e06e9820f9b9d420e430165a80da44006",
+  "version": 1,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "cbc13089ca88739bd69afccc601c528ce52308754b9323b3513c434db8d8bb28",
+      "vout": 1,
+      "prevout": {
+        "scriptpubkey": "001470038d4bcd01ed0e2132b669411a3cfec8914256",
+        "scriptpubkey_asm": "OP_0 OP_PUSHBYTES_20 70038d4bcd01ed0e2132b669411a3cfec8914256",
+        "scriptpubkey_type": "v0_p2wpkh",
+        "scriptpubkey_address": "bc1qwqpc6j7dq8ksugfjke55zx3ulmyfzsjk5pa37y",
+        "value": 70000
+      },
+      "scriptsig": "",
+      "scriptsig_asm": "",
+      "witness": [
+        "304402204fba55972e47b7a5e6b233413148e5d36a981bc1face12ce9a9fc8e42409b51202200e8622b984d2a48d135f13f6cf7e86c0b2bdf38c531bef34f9f40e48bec31d0701",
+        "022e9fb27b6290e94f5be143a2ddc1b8c6109da0f4df1a8b0372f1db238afa7c31"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "a9148e35cec0acb1a20d9e360c761632e7f7846efadb87",
+      "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 8e35cec0acb1a20d9e360c761632e7f7846efadb OP_EQUAL",
+      "scriptpubkey_type": "p2sh",
+      "scriptpubkey_address": "3EexLQLXafLDBh7y9ZFh6AYgA2sj1puy5s",
+      "value": 65300
+    },
+    {
+      "scriptpubkey": "001470038d4bcd01ed0e2132b669411a3cfec8914256",
+      "scriptpubkey_asm": "OP_0 OP_PUSHBYTES_20 70038d4bcd01ed0e2132b669411a3cfec8914256",
+      "scriptpubkey_type": "v0_p2wpkh",
+      "scriptpubkey_address": "bc1qwqpc6j7dq8ksugfjke55zx3ulmyfzsjk5pa37y",
+      "value": 866
+    }
+  ],
+  "size": 223,
+  "weight": 565,
+  "fee": 3834,
+  "status": {
+    "confirmed": true,
+    "block_height": 834638,
+    "block_hash": "000000000000000000025f742c626208ac87e0b7d15054abb4a19ca2d735a54e",
+    "block_time": 1710405325
+  },
+  "hex": "0100000000010128bbd8b84d433c51b323934b750823e58c521c60ccfc9ad69b7388ca8930c1cb0100000000ffffffff0214ff00000000000017a9148e35cec0acb1a20d9e360c761632e7f7846efadb87620300000000000016001470038d4bcd01ed0e2132b669411a3cfec89142560247304402204fba55972e47b7a5e6b233413148e5d36a981bc1face12ce9a9fc8e42409b51202200e8622b984d2a48d135f13f6cf7e86c0b2bdf38c531bef34f9f40e48bec31d070121022e9fb27b6290e94f5be143a2ddc1b8c6109da0f4df1a8b0372f1db238afa7c3100000000"
+}

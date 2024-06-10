@@ -1,0 +1,78 @@
+{
+  "txid": "bffd60d9b05c57c55eeb9247d07980b46b29363ecce91ec21819a75c3b1f276e",
+  "version": 2,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "b59bb3c03aba219028dc8da180f4bfd75b8b448385c6bbbc0939b7f3ac95e805",
+      "vout": 0,
+      "prevout": {
+        "scriptpubkey": "5120a87cb6c0cab7e76951125ebcfa3c15584a5f4b93d54f7c0b72633db9617e790f",
+        "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 a87cb6c0cab7e76951125ebcfa3c15584a5f4b93d54f7c0b72633db9617e790f",
+        "scriptpubkey_type": "v1_p2tr",
+        "scriptpubkey_address": "bc1p4p7tdsx2klnkj5gjt67050q4tp997jun648hczmjvv7mjct70y8sc93xed",
+        "value": 546
+      },
+      "scriptsig": "",
+      "scriptsig_asm": "",
+      "witness": [
+        "224d440a7f4e455a416dbcafcd59db16729f0baa936030a6105934f082b6e6a8ec0e2aa3d0f75be5bb1315f56f8a489d915b382b352a6ee55927a8c5123eb95f01"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967295
+    },
+    {
+      "txid": "c3142966d797660977637d006e6610638efeb09cc635a1aba4856e98ed84c72e",
+      "vout": 1,
+      "prevout": {
+        "scriptpubkey": "a914664ae82afe0978c9120724ad94796702302279e587",
+        "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 664ae82afe0978c9120724ad94796702302279e5 OP_EQUAL",
+        "scriptpubkey_type": "p2sh",
+        "scriptpubkey_address": "3B1tajVr3shGG4gURbe56zZje7peqj9bpv",
+        "value": 120092
+      },
+      "scriptsig": "16001449e2c0efd81f753b60afdfc084487c280f97783f",
+      "scriptsig_asm": "OP_PUSHBYTES_22 001449e2c0efd81f753b60afdfc084487c280f97783f",
+      "witness": [
+        "3044022050e6ab30f63140aa24122008747366f4b6463999de6127d788195ddcf93e496b02200eae31a86163af3a3a746e7f041aac22ef8b15721f22dc01484d84d3e749eee101",
+        "0357244dd7e816583d094087c58de06fefe7f62dbfc565b758f874caffc07f50d3"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967295,
+      "inner_redeemscript_asm": "OP_0 OP_PUSHBYTES_20 49e2c0efd81f753b60afdfc084487c280f97783f"
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "5120dcbc58419177d42f32492bcee74da0c56e27d09f65cb6726f952d39e2b4429eb",
+      "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 dcbc58419177d42f32492bcee74da0c56e27d09f65cb6726f952d39e2b4429eb",
+      "scriptpubkey_type": "v1_p2tr",
+      "scriptpubkey_address": "bc1pmj79ssv3wl2z7vjf908wwndqc4hz05ylvh9kwfhe2tfeu26y984smwq93j",
+      "value": 546
+    },
+    {
+      "scriptpubkey": "a914ea6b832a05c6ca578baa3836f3f25553d41068a587",
+      "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 ea6b832a05c6ca578baa3836f3f25553d41068a5 OP_EQUAL",
+      "scriptpubkey_type": "p2sh",
+      "scriptpubkey_address": "3P4WqXDbSLRhzo2H6MT6YFbvBKBDPLbVtQ",
+      "value": 1000
+    },
+    {
+      "scriptpubkey": "a914664ae82afe0978c9120724ad94796702302279e587",
+      "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 664ae82afe0978c9120724ad94796702302279e5 OP_EQUAL",
+      "scriptpubkey_type": "p2sh",
+      "scriptpubkey_address": "3B1tajVr3shGG4gURbe56zZje7peqj9bpv",
+      "value": 114553
+    }
+  ],
+  "size": 398,
+  "weight": 1064,
+  "fee": 4539,
+  "status": {
+    "confirmed": true,
+    "block_height": 834460,
+    "block_hash": "00000000000000000000484a79b643b2524bbce82e5d8a442013fa5b8905ed98",
+    "block_time": 1710307468
+  },
+  "hex": "0200000000010205e895acf3b73909bcbbc68583448b5bd7bff480a18ddc289021ba3ac0b39bb50000000000ffffffff2ec784ed986e85a4aba135c69cb0fe8e6310666e007d6377096697d7662914c3010000001716001449e2c0efd81f753b60afdfc084487c280f97783fffffffff032202000000000000225120dcbc58419177d42f32492bcee74da0c56e27d09f65cb6726f952d39e2b4429ebe80300000000000017a914ea6b832a05c6ca578baa3836f3f25553d41068a58779bf01000000000017a914664ae82afe0978c9120724ad94796702302279e5870141224d440a7f4e455a416dbcafcd59db16729f0baa936030a6105934f082b6e6a8ec0e2aa3d0f75be5bb1315f56f8a489d915b382b352a6ee55927a8c5123eb95f0102473044022050e6ab30f63140aa24122008747366f4b6463999de6127d788195ddcf93e496b02200eae31a86163af3a3a746e7f041aac22ef8b15721f22dc01484d84d3e749eee101210357244dd7e816583d094087c58de06fefe7f62dbfc565b758f874caffc07f50d300000000"
+}

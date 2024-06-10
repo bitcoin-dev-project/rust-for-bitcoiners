@@ -1,0 +1,52 @@
+{
+  "txid": "11dad124ab5bdf74bbbf653bdf0e1286ff715dc0fda04d4e4078b1693593ea62",
+  "version": 2,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "a48063e25c58bc0280608a3460809adc3e524f42d08b5963b9950efadead3db4",
+      "vout": 1,
+      "prevout": {
+        "scriptpubkey": "001413c886bfb46f7b5bd267bf52cd08b219be44110b",
+        "scriptpubkey_asm": "OP_0 OP_PUSHBYTES_20 13c886bfb46f7b5bd267bf52cd08b219be44110b",
+        "scriptpubkey_type": "v0_p2wpkh",
+        "scriptpubkey_address": "bc1qz0ygd0a5daa4h5n8hafv6z9jrxlygygtrqh988",
+        "value": 18182378
+      },
+      "scriptsig": "",
+      "scriptsig_asm": "",
+      "witness": [
+        "30450221008cb5a54f44a3924df89bd07b790e9aa631fab01ea23993477da9c8504bca8e9302205732c8d90129a15492e927f10b430b8d3d42b408b413a67ccc8980c8c079546801",
+        "038bd4995fc3bae5ec859ef44af225b329baeff7567f90879c2b89ea6bce6732b2"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "0014bb6c698a992a2323c8c86e2451ac51cada873ea2",
+      "scriptpubkey_asm": "OP_0 OP_PUSHBYTES_20 bb6c698a992a2323c8c86e2451ac51cada873ea2",
+      "scriptpubkey_type": "v0_p2wpkh",
+      "scriptpubkey_address": "bc1qhdkxnz5e9g3j8jxgdcj9rtz3etdgw04z40nlnd",
+      "value": 3219627
+    },
+    {
+      "scriptpubkey": "a914b16d3ffafc01b90b0f68be62177d223a441052ae87",
+      "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 b16d3ffafc01b90b0f68be62177d223a441052ae OP_EQUAL",
+      "scriptpubkey_type": "p2sh",
+      "scriptpubkey_address": "3HsAQKFaqKLy2V9eFdz3vT8X6wtx3CWfj9",
+      "value": 14959091
+    }
+  ],
+  "size": 224,
+  "weight": 566,
+  "fee": 3660,
+  "status": {
+    "confirmed": true,
+    "block_height": 834638,
+    "block_hash": "000000000000000000025f742c626208ac87e0b7d15054abb4a19ca2d735a54e",
+    "block_time": 1710405325
+  },
+  "hex": "02000000000101b43daddefa0e95b963598bd0424f523edc9a8060348a608002bc585ce26380a40100000000ffffffff02ab20310000000000160014bb6c698a992a2323c8c86e2451ac51cada873ea2f341e4000000000017a914b16d3ffafc01b90b0f68be62177d223a441052ae87024830450221008cb5a54f44a3924df89bd07b790e9aa631fab01ea23993477da9c8504bca8e9302205732c8d90129a15492e927f10b430b8d3d42b408b413a67ccc8980c8c07954680121038bd4995fc3bae5ec859ef44af225b329baeff7567f90879c2b89ea6bce6732b200000000"
+}

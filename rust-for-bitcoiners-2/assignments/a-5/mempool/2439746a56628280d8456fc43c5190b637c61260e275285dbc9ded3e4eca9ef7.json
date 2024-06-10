@@ -1,0 +1,53 @@
+{
+  "txid": "2439746a56628280d8456fc43c5190b637c61260e275285dbc9ded3e4eca9ef7",
+  "version": 2,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "893338efced69266b11e9f861a2ca089da3713d79dc2e721bccefcef55ac2c4a",
+      "vout": 1,
+      "prevout": {
+        "scriptpubkey": "a914b41adbf082daddabb7d1a4e7c078d4d69bdf079d87",
+        "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 b41adbf082daddabb7d1a4e7c078d4d69bdf079d OP_EQUAL",
+        "scriptpubkey_type": "p2sh",
+        "scriptpubkey_address": "3J7KjH8URXPqJXjtFJfFiqWBGESvJNe6Vb",
+        "value": 50000
+      },
+      "scriptsig": "160014cf1c4ec8eb0860da2f8fd3bc1e3e3aa409e32b74",
+      "scriptsig_asm": "OP_PUSHBYTES_22 0014cf1c4ec8eb0860da2f8fd3bc1e3e3aa409e32b74",
+      "witness": [
+        "304402206cd6745b834e681ffe77ead24006d147537bb27f3d04d98ae38eefb8d3086b2b02200ff3c50fe1de5345dbf853f9c9c3cf41202945c1d7f1058ecdc6fd3b08a2addf01",
+        "02c96b2d9f09771c5460019470e405a19f8994e66bdf777a08c99abb49d44bcf0a"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967295,
+      "inner_redeemscript_asm": "OP_0 OP_PUSHBYTES_20 cf1c4ec8eb0860da2f8fd3bc1e3e3aa409e32b74"
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "a914134a4fee1e5b4cc56de1028a25d4db078625385087",
+      "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 134a4fee1e5b4cc56de1028a25d4db0786253850 OP_EQUAL",
+      "scriptpubkey_type": "p2sh",
+      "scriptpubkey_address": "33T1nVXLUMPDENBh7DNgmVrKSSfUXhWqRX",
+      "value": 3000
+    },
+    {
+      "scriptpubkey": "a914fb5d498d67b9c5be52aeab226c1c4f960dee7aa087",
+      "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 fb5d498d67b9c5be52aeab226c1c4f960dee7aa0 OP_EQUAL",
+      "scriptpubkey_type": "p2sh",
+      "scriptpubkey_address": "3Qc7HQhT4A9XvtXEoiBJRwA6ZmgTVpSQ13",
+      "value": 45201
+    }
+  ],
+  "size": 247,
+  "weight": 661,
+  "fee": 1799,
+  "status": {
+    "confirmed": true,
+    "block_height": 834464,
+    "block_hash": "0000000000000000000177a0869a911a2b65c9bdcd5a8bcb02b68f305bee848e",
+    "block_time": 1710308296
+  },
+  "hex": "020000000001014a2cac55effccebc21e7c29dd71337da89a02c1a869f1eb16692d6ceef3833890100000017160014cf1c4ec8eb0860da2f8fd3bc1e3e3aa409e32b74ffffffff02b80b00000000000017a914134a4fee1e5b4cc56de1028a25d4db07862538508791b000000000000017a914fb5d498d67b9c5be52aeab226c1c4f960dee7aa0870247304402206cd6745b834e681ffe77ead24006d147537bb27f3d04d98ae38eefb8d3086b2b02200ff3c50fe1de5345dbf853f9c9c3cf41202945c1d7f1058ecdc6fd3b08a2addf012102c96b2d9f09771c5460019470e405a19f8994e66bdf777a08c99abb49d44bcf0a00000000"
+}

@@ -1,0 +1,53 @@
+{
+  "txid": "70ed9ccbc66071fbf415b88502031577444c7aa7d53e82a0361dafb776112062",
+  "version": 2,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "57ee55aac4941db7db265b8147d37a573f958c1597a4cf905cb881e3ec38267f",
+      "vout": 1,
+      "prevout": {
+        "scriptpubkey": "51208a00b82b64405ecea89091b63cf6e0bd004f24fb486908ffde9dfad69bf5f810",
+        "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 8a00b82b64405ecea89091b63cf6e0bd004f24fb486908ffde9dfad69bf5f810",
+        "scriptpubkey_type": "v1_p2tr",
+        "scriptpubkey_address": "bc1p3gqts2mygp0va2ysjxmreahqh5qy7f8mfp5s3l77nhaddxl4lqgqgj5s5c",
+        "value": 286230
+      },
+      "scriptsig": "",
+      "scriptsig_asm": "",
+      "witness": [
+        "ef5556a5f4cb4dab0d2c0d8a454f862b64702ffa74fbd01a7c87e5bc47632daadd130d906eeaf9c7a19f42021dbb4548d880581a34e6273eb2bf2a1a2ad91323",
+        "0063036f7264510a746578742f706c61696e000d3833343535322e6269746d617068",
+        "c1049ceaf6af98c1ce723878a19cc8a65f94a48f0b39b0852cbeef1bb229d5a22e"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967293
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "0014b4e2d54269fdfe704ea43a9cf1a9778d0aef4a85",
+      "scriptpubkey_asm": "OP_0 OP_PUSHBYTES_20 b4e2d54269fdfe704ea43a9cf1a9778d0aef4a85",
+      "scriptpubkey_type": "v0_p2wpkh",
+      "scriptpubkey_address": "bc1qkn3d2snflhl8qn4y82w0r2th359w7j59fzjwz2",
+      "value": 294
+    },
+    {
+      "scriptpubkey": "5120c240e30d9a77409064d24f1f2b97cd64dd458a8caa83d2e7545ac3573a9ad8b3",
+      "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 c240e30d9a77409064d24f1f2b97cd64dd458a8caa83d2e7545ac3573a9ad8b3",
+      "scriptpubkey_type": "v1_p2tr",
+      "scriptpubkey_address": "bc1pcfqwxrv6waqfqexjfu0jh97dvnw5tz5v42pa9e65ttp4ww56mzesnd06j0",
+      "value": 283296
+    }
+  ],
+  "size": 262,
+  "weight": 637,
+  "fee": 2640,
+  "status": {
+    "confirmed": true,
+    "block_height": 834552,
+    "block_hash": "00000000000000000001dd0468a70c94f619251d286585cff57aeb4bd9ede330",
+    "block_time": 1710355598
+  },
+  "hex": "020000000001017f2638ece381b85c90cfa497158c953f577ad347815b26dbb71d94c4aa55ee570100000000fdffffff022601000000000000160014b4e2d54269fdfe704ea43a9cf1a9778d0aef4a85a052040000000000225120c240e30d9a77409064d24f1f2b97cd64dd458a8caa83d2e7545ac3573a9ad8b30340ef5556a5f4cb4dab0d2c0d8a454f862b64702ffa74fbd01a7c87e5bc47632daadd130d906eeaf9c7a19f42021dbb4548d880581a34e6273eb2bf2a1a2ad91323220063036f7264510a746578742f706c61696e000d3833343535322e6269746d61706821c1049ceaf6af98c1ce723878a19cc8a65f94a48f0b39b0852cbeef1bb229d5a22e00000000"
+}

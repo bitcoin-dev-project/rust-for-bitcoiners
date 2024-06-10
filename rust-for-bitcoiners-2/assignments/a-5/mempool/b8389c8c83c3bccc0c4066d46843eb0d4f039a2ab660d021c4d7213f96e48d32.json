@@ -1,0 +1,77 @@
+{
+  "txid": "b8389c8c83c3bccc0c4066d46843eb0d4f039a2ab660d021c4d7213f96e48d32",
+  "version": 2,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "7e6694b2d5aa774abd239f6d6e6c2edea00a5771af9ff0ea62a67f6e2ee81af2",
+      "vout": 0,
+      "prevout": {
+        "scriptpubkey": "5120b1d4f2d1923c290b7f3f065d102f83a45d43dddaf9ba60572f25338377dab804",
+        "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 b1d4f2d1923c290b7f3f065d102f83a45d43dddaf9ba60572f25338377dab804",
+        "scriptpubkey_type": "v1_p2tr",
+        "scriptpubkey_address": "bc1pk82095vj8s5sklelqew3qtur53w58hw6lxaxq4e0y5ecxa76hqzqd9x3xg",
+        "value": 546
+      },
+      "scriptsig": "",
+      "scriptsig_asm": "",
+      "witness": [
+        "6c8eb0a3d6050804d594b5359bb420892ca7df17179ebef83f4f64260ff5738e00df35bb7b41212fb7acf282afbb0bb6082b08448e0aeb40bcbdc481645c0630"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967295
+    },
+    {
+      "txid": "7e6694b2d5aa774abd239f6d6e6c2edea00a5771af9ff0ea62a67f6e2ee81af2",
+      "vout": 3,
+      "prevout": {
+        "scriptpubkey": "a914e2da0d7758ff99dad45d57f9912104745f7093a787",
+        "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 e2da0d7758ff99dad45d57f9912104745f7093a7 OP_EQUAL",
+        "scriptpubkey_type": "p2sh",
+        "scriptpubkey_address": "3NNVrTWT8MYdHXnnjFSD5XyAfzeSbadFVD",
+        "value": 5714
+      },
+      "scriptsig": "1600142c033ddc5deb4aa34af525a1b8f1f626454a0caf",
+      "scriptsig_asm": "OP_PUSHBYTES_22 00142c033ddc5deb4aa34af525a1b8f1f626454a0caf",
+      "witness": [
+        "304402201eb9db01a043eb5affda17c201d70939b011412dcb92285b269f858b9ad13f270220078608074b32ff8604183de6c27f76748bd5b14d8de746896afa35ddbe6fc38e01",
+        "03d77536133f9d63b41c39d2c2c8a0f8c989615df7cb9fda83fed726ed6ed0909f"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967295,
+      "inner_redeemscript_asm": "OP_0 OP_PUSHBYTES_20 2c033ddc5deb4aa34af525a1b8f1f626454a0caf"
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "5120b1d4f2d1923c290b7f3f065d102f83a45d43dddaf9ba60572f25338377dab804",
+      "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 b1d4f2d1923c290b7f3f065d102f83a45d43dddaf9ba60572f25338377dab804",
+      "scriptpubkey_type": "v1_p2tr",
+      "scriptpubkey_address": "bc1pk82095vj8s5sklelqew3qtur53w58hw6lxaxq4e0y5ecxa76hqzqd9x3xg",
+      "value": 546
+    },
+    {
+      "scriptpubkey": "6a1152554e45414c5048415f5354414b494e47096338323937303835320435353030",
+      "scriptpubkey_asm": "OP_RETURN OP_PUSHBYTES_17 52554e45414c5048415f5354414b494e47 OP_PUSHBYTES_9 633832393730383532 OP_PUSHBYTES_4 35353030",
+      "scriptpubkey_type": "op_return",
+      "value": 0
+    },
+    {
+      "scriptpubkey": "a914e2da0d7758ff99dad45d57f9912104745f7093a787",
+      "scriptpubkey_asm": "OP_HASH160 OP_PUSHBYTES_20 e2da0d7758ff99dad45d57f9912104745f7093a7 OP_EQUAL",
+      "scriptpubkey_type": "p2sh",
+      "scriptpubkey_address": "3NNVrTWT8MYdHXnnjFSD5XyAfzeSbadFVD",
+      "value": 1584
+    }
+  ],
+  "size": 408,
+  "weight": 1107,
+  "fee": 4130,
+  "status": {
+    "confirmed": true,
+    "block_height": 834638,
+    "block_hash": "000000000000000000025f742c626208ac87e0b7d15054abb4a19ca2d735a54e",
+    "block_time": 1710405325
+  },
+  "hex": "02000000000102f21ae82e6e7fa662eaf09faf71570aa0de2e6c6e6d9f23bd4a77aad5b294667e0000000000fffffffff21ae82e6e7fa662eaf09faf71570aa0de2e6c6e6d9f23bd4a77aad5b294667e03000000171600142c033ddc5deb4aa34af525a1b8f1f626454a0cafffffffff032202000000000000225120b1d4f2d1923c290b7f3f065d102f83a45d43dddaf9ba60572f25338377dab8040000000000000000226a1152554e45414c5048415f5354414b494e47096338323937303835320435353030300600000000000017a914e2da0d7758ff99dad45d57f9912104745f7093a78701406c8eb0a3d6050804d594b5359bb420892ca7df17179ebef83f4f64260ff5738e00df35bb7b41212fb7acf282afbb0bb6082b08448e0aeb40bcbdc481645c06300247304402201eb9db01a043eb5affda17c201d70939b011412dcb92285b269f858b9ad13f270220078608074b32ff8604183de6c27f76748bd5b14d8de746896afa35ddbe6fc38e012103d77536133f9d63b41c39d2c2c8a0f8c989615df7cb9fda83fed726ed6ed0909f00000000"
+}

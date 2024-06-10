@@ -1,0 +1,59 @@
+{
+  "txid": "1b13c1ba1500de584df2bbdccb8641d456faf0d91c7dc3fe95bbab831fae3cc8",
+  "version": 1,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "951210bc7f6cd0fc53e3aefc9f442731bfe90dca72b97d72eeb62903947bc7dd",
+      "vout": 2,
+      "prevout": {
+        "scriptpubkey": "00142dc00bd89757e216724a12f5c1e22d4aabaa3154",
+        "scriptpubkey_asm": "OP_0 OP_PUSHBYTES_20 2dc00bd89757e216724a12f5c1e22d4aabaa3154",
+        "scriptpubkey_type": "v0_p2wpkh",
+        "scriptpubkey_address": "bc1q9hqqhkyh2l3pvuj2zt6urc3df2465v257var2j",
+        "value": 84182
+      },
+      "scriptsig": "",
+      "scriptsig_asm": "",
+      "witness": [
+        "30450221008d7da7a3b7d97bac51a8e1e2eecf78c0dd4a97ddacee552eb63c71510907902c02200aee043998be38c66e67f33e0422049b458ac765dff9a775034f318df05f904301",
+        "021e9070c07d525e03427d7f58a1949639238b00f4ed1d72c5dd1208e414dfabe9"
+      ],
+      "is_coinbase": false,
+      "sequence": 4294967293
+    }
+  ],
+  "vout": [
+    {
+      "scriptpubkey": "512070f12aa8aa4ff59c1ad7c09139602f2bd7a2d73fc9a263390753ef88bd633bc1",
+      "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 70f12aa8aa4ff59c1ad7c09139602f2bd7a2d73fc9a263390753ef88bd633bc1",
+      "scriptpubkey_type": "v1_p2tr",
+      "scriptpubkey_address": "bc1pwrcj4292fl6ecxkhczgnjcp090t694elex3xxwg820hc30tr80qs33sex0",
+      "value": 2366
+    },
+    {
+      "scriptpubkey": "5120f667578b85bed256c7fcb9f2cda488d5281e52ca42e7dd4bc21e95149562f09f",
+      "scriptpubkey_asm": "OP_PUSHNUM_1 OP_PUSHBYTES_32 f667578b85bed256c7fcb9f2cda488d5281e52ca42e7dd4bc21e95149562f09f",
+      "scriptpubkey_type": "v1_p2tr",
+      "scriptpubkey_address": "bc1p7en40zu9hmf9d3luh8evmfyg655pu5k2gtna6j7zr623f9tz7z0stfnwav",
+      "value": 2114
+    },
+    {
+      "scriptpubkey": "00142dc00bd89757e216724a12f5c1e22d4aabaa3154",
+      "scriptpubkey_asm": "OP_0 OP_PUSHBYTES_20 2dc00bd89757e216724a12f5c1e22d4aabaa3154",
+      "scriptpubkey_type": "v0_p2wpkh",
+      "scriptpubkey_address": "bc1q9hqqhkyh2l3pvuj2zt6urc3df2465v257var2j",
+      "value": 77154
+    }
+  ],
+  "size": 278,
+  "weight": 782,
+  "fee": 2548,
+  "status": {
+    "confirmed": true,
+    "block_height": 834460,
+    "block_hash": "00000000000000000000484a79b643b2524bbce82e5d8a442013fa5b8905ed98",
+    "block_time": 1710307468
+  },
+  "hex": "01000000000101ddc77b940329b6ee727db972ca0de9bf3127449ffcaee353fcd06c7fbc1012950200000000fdffffff033e0900000000000022512070f12aa8aa4ff59c1ad7c09139602f2bd7a2d73fc9a263390753ef88bd633bc14208000000000000225120f667578b85bed256c7fcb9f2cda488d5281e52ca42e7dd4bc21e95149562f09f622d0100000000001600142dc00bd89757e216724a12f5c1e22d4aabaa3154024830450221008d7da7a3b7d97bac51a8e1e2eecf78c0dd4a97ddacee552eb63c71510907902c02200aee043998be38c66e67f33e0422049b458ac765dff9a775034f318df05f90430121021e9070c07d525e03427d7f58a1949639238b00f4ed1d72c5dd1208e414dfabe900000000"
+}
