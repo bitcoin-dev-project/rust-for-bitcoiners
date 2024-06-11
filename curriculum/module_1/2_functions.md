@@ -25,7 +25,7 @@ fn mul(a: u64, b: u64) -> u64 {
 
 ### How to use functions?
 
-Code sinppets to use the functions are given below,
+Code sinppets to use the above functions are given below,
 
 ```rust
 let a: i32 = 6;
@@ -38,7 +38,7 @@ let x: i64 = 50;
 let y = inc(x); // Will be an error because, the input parameter types don't match
 ```
 
-This might feel too restrictive. Essentially what we are seeing is that, inorder to define an
+This might feel too restrictive. Essentially what we are seeing is that, in order to define an
 incrementing function for all numbers then we have to duplicate the same function code with
 different function signatures.
 
@@ -71,8 +71,8 @@ it satisfies the following constraints.
 1. It should implemnent the Add trait in std::ops
 1. It should implement the From<u8> trait
 
-If a type implements Add trait means it can be used with "+" operator. This is similar to type classes in
-Haskell.
+If a type implements `Add` trait means it can be used with "+" operator.
+This is similar to type classes in Haskell.
 We need to add 1 to type *T* so we require that we should be able to convert *1* from *u8* to that type.
 1 requires just one bit to represent it, so the smallest possible unsigned integer is used.
 
@@ -89,8 +89,8 @@ inc(s); // Invalid, will be a compile time error.
 
 ## Readability
 
-In Software Engineering readability does not mean is it easy to read like English.
-It means how easy it is to reason about the code just by looking at them.
+A readable code does not necessarily equates with how easy it looks.
+Readability means whether the code can be read without any ambiguity.
 If you are experienced in dynamic programming languages like Python, JS, Ruby etc., it might
 sound crazy when I say that Rust is more readable than any dynamic programming language in most
 cases. *Imagine a function with 10 input parameters and 20 lines of code in a dynamic programming language*.
@@ -98,13 +98,13 @@ cases. *Imagine a function with 10 input parameters and 20 lines of code in a dy
 Because just by looking at the type signature of a function you can guess what the function might do.
 In Rust we know very clearly what the input types are and how to use them. It is easy to document the code
 as well. Error handling is also simplified because compiler takes care of all the type errors.
-Testing is also a lot simplified. You would've heard the saying that tests makes it easier to
-understand the function, in Rust you don't have to test for type errors.
+Testing is also a lot simplified. In Rust you don't have to test for type errors.
 
-But since Rust doesn't have GC and forces the programmer to think about pointers, lifetimes etc.,
-it adds to the cognitive load of a developer. But the advantage is that Rust programs are very efficient.
+Since Rust doesn't have GC and forces the programmer to think about pointers, lifetimes etc.,
+it adds to the cognitive load of a developers. But the advantage is that Rust programs are very efficient.
 
 ## Reliability and Refactoring
 
 Refactoring a Javascript codebase can be a nightmare. But in Rust the compiler helps you throghout the
-refactoring process and you have a high degree of confidence on how the code works.
+refactoring process and you have a high degree of confidence that the refactored code did not alter the
+business logic.
