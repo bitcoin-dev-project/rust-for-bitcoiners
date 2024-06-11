@@ -59,3 +59,7 @@ fn main() {
 
 Slices behave like arrays, because under the hood they are just a reference
 to an array, array enclosed in a Vec or a String etc.,
+
+Looking up for an element or mutating an element at an index of a slice/array/vec
+works very similar to how these structures are used in common programming languages
+like c, java, javascript, python etc.,
