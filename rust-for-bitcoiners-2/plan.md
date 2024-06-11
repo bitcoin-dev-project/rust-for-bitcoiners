@@ -2,26 +2,26 @@
 
 ## Introduction
 
-In this course students will learn Rust programming language by implementing concepts used
+In this course, students will learn Rust programming language by implementing concepts used
 in bitcoin and interacting with bitcoin software and related crates(libraries) in rust.
 
 ### Why Rust for bitcoin?
 
 Rust is a static strongly typed Systems programming language giving programmers control of computer
 resources like CPU, memory, threads etc., directly in a safe way.
-It achieves the safety with the help of expressive type system using Generics and traits
+It achieves safety with the help of an expressive type system using Generics and traits
 and borrow checking.
 
-It is a widely accepted belief in the bitcoin community that bitcoin and related softwares should
-be efficient and consume less computing resources so that it can be ran in a relatively cheap hardware.
+It is a widely accepted belief in the bitcoin community that bitcoin and related software should
+be efficient and consume less computing resources so that it can be run on relatively cheap hardware.
 
-C, C++ etc., gives the ability to write efficient, less resource intensive code but does not gaurd
-the programmers from introducing memory vulnerabilities. This is why Rust is now the go to solution
-for implementing bitcoin related softwares.
+C, C++ etc., gives the ability to write efficient, less resource-intensive code but does not guard
+the programmers from introducing memory vulnerabilities. This is why Rust is now the go-to choice
+for implementing bitcoin-related software.
 
 ### Prerequisites for the course
 
-This course expects the studets to have prior programming knowledge and understanding of basic concepts
+This course expects the students to have prior programming knowledge and understanding of basic concepts
 like variables, loops, functions, user defined types etc.,
 Reading of Chapters 1 to 4 of [Rust book](https://doc.rust-lang.org/book/title-page.html), it's not required have thorough understanding,
 but get your setup up and ready for coding in rust.
@@ -69,7 +69,7 @@ transaction, parsing transaction data from text files and verifying their signat
 
 Memory allocation in depth by building a graph data structure using Rust.
 
-**Assignment**: Bitcoin blockchain privacy analysis by linking transactions using graph datastructure.
+**Assignment**: Bitcoin blockchain privacy analysis by linking transactions using graph data structures.
 
 ### Module 7
 
@@ -86,27 +86,27 @@ Introduction to asynchronous programming using `tokio`.
 ## What is the outcome of the course?
 
 This course is sponsored by Chaincode to get more programmers into Rust Bitcoin FOSS.
-So we expect you to be a self learner and come up with your own ideas. Every assignment is open ended
+So we expect you to be a self-learner and come up with your own ideas. Every assignment is open ended
 and can be extended as you wish. If you submit the assignment within the deadline your implementation
-will be reviewed and you'll ge a timely feedback.
+will be reviewed and you'll get timely feedback.
 
 Three students from the first run of this course
 have successfully contributed to [rust-coinselection](https://github.com/Bitshala-Incubator/rust-coinselect) repository so far.
 
 ## Regular session
 
-During regular session based on the number of students, groups will be formed.
-Each group will have a same set of questions related to rust and bitcoin.
-Each student will be allocated a question and thier job is to explain the concepts to others.
-I will be the moderator.
+During regular sessions groups will be formed.
+Each group will be provided a set of questions related to rust and bitcoin.
+Each student will be allocated a question and their job is to explain the concepts to others.
+Moderators will be provided.
 
-Intial 20 minutes introduction will be conducted by me, next 20 minutes for group discussion
-and the last 20 minutes will be conducted by me clarifying the doubts or explaining stuffs.
+The initial 20 minutes introduction will be conducted by the instructor, followed by 20 minutes of group discussion
+and the last 20 minutes will be reserved for clarifying open questions and issues.
 
 ## Office hours
 
-Bring your questions related to rust and bitcoin.
-A form will be posted where you can add your questions in advance so that I can prepare well.
+This is a time specifically to address questions related to rust and bitcoin.
+A form will be posted where you can add your questions in advance so that the instructor can be prepared.
 
 ## Suggested Reading
 
