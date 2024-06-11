@@ -35,7 +35,7 @@ programming language relies on some version of malloc to do memory allocation.
 
 ### Module 1
 
-Introduction to variables, loops, arrays, integers, functions.
+Introduction to variables, loops, arrays, integers, functions and pointers.
 
 **Assignment**: Ceasar Cypher
 
