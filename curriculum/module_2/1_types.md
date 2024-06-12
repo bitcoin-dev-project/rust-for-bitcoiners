@@ -11,7 +11,7 @@ This is very similar to a simple class in Java or struct in C.
 
 ```rust
 struct FieldElement {
-    n: u128,
+    n: u128, // 128 bit unsigned integer
     p: u128,
 }
 ```
