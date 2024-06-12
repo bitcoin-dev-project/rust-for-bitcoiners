@@ -56,25 +56,56 @@ let z = x; // This is valid
 
 // The value 5 exists in 3 different memory locations, because it gets copied in line 54 and 55.
 ```
-For non copyable types like **String** we have different semantics because of the ownership rule.
 
+Another example shows that we can pass `x` as an argument to a function and continue to use `x` in our current function.
+[Rust Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=4d1e9dd607a375b5065563a84bf4b3a7)
 ```rust
-let s = String::from("abcd");
-let s1 = s;
-println!("{s}"); // ERROR: borrow of moved value: `s`
-// Because String is not copyable, hence move semantics apply
-// Because the value owned by s is moved to the variable s1
-// s1 owns the value which was once held by s
-// Now variable s don't own or refer to any value
-// Essentially the ownership of the value is getting moved from one variable to another.
+fn add_5(num: i32) -> i32 { // receives a copy of x as the argument
+    num + 5
+}
 
-// The value `String::from("abcd")` exists in a single point in memory, and it is not moved.
+#[allow(unused_variables)]
+fn main() -> () {
+    let x: i32 = 5;
+    let y = add_5(x);
+    
+    println!("{}", x); // prints 5
+}
 ```
 
-## Why some types are Copyable but others are not?
+We won't be able to do this for non-copyable types, like a **String**.
+There are different semantics because of the ownership rule.
+Take a look at the example below.
+[Rust Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=cf786ab3bacd43e260e73ae5efa49d50)
+```rust
+fn main() {
+    let s1 = String::from("hello");
+
+    let len = calculate_length(s1);
+
+    println!("The length of '{}' is {}.", s1, len); // this will create an error
+    // we're attempting to use s1 after it has been "moved" into calculate_length
+}
+
+fn calculate_length(s: String) -> usize {
+    s.len()
+}
+```
+
+## Why does Rust *move* variables?
+
+Any type that *owns* data on the heap is typically *moved*.
+In this case, a *String* is actually a *smart pointer* to heap data which stores UTF-8 valid bytes.
+So when the pointer is passed as an argument, ownership of the heap data is moved from the variable in `main` to the variable `s` in `calculate_length`.
+A new copy of the pointer is being made in `calculate_length` and then ownership of the heap data is given to that new pointer.
+In Rust, only one variable can have ownership of heap data at any given time.
+This concept of a single owner is how Rust efficiently manages memory.
+Whenever that owner goes out of scope, Rust knows that it can safely clear the data owned in memory as well.
+
+## Why are some types Copyable?
 
 For numbers we know exactly how many bits are required to store them.
-Can the same be said about Strings? The length of a String is unbounded, essentailly
+Can the same be said about Strings? The length of a String is unbounded, essentially
 it can be any large number only bounded by the amount of RAM of the computer.
 So if a length of a String is 1,000,000 then it effectively requires 8,000,000 bits plus
 some additional bits to store them in memory. Is it efficient to copy them in every assignment and
