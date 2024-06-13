@@ -1,21 +1,3 @@
-# Data Types
-
-## Structs
-
-In Rust structs are product types, think about Cartesian product between sets.
-It is a collection of *n* types. At any point in time the value of a struct is the
-combination of all the *n* types.
-This is very similar to a simple class in Java or struct in C.
-
-**Example**
-
-```rust
-struct FieldElement {
-    n: u128, // 128 bit unsigned integer
-    p: u128,
-}
-```
-
 ## Enums
 
 If you want to specify a Type which can be one of *n* types then enum can be used.
@@ -80,4 +62,3 @@ an absence of value. In that case Result is used.
 
 That's why the return type of ```Client::new(url, Auth::user(username, password))``` of RpcApi trait
 in *rust-bitcoincore_rpc* module is a result.
-
