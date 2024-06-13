@@ -7,6 +7,12 @@ it is relevant to Bitcoin technology.
 
 The purpose of the top level directories are explained below.
 
+* [rust-for-bitcoiners-2](./rust-for-bitcoiners-2/)
+
+This directory contains the course materials relavant to the second run of the live classing which
+will span over 8 weeks. The start date is *June 17 2024*. It contains the assignments for now.
+This will be updated after every live class and doubt clearing sessions.
+
 * [rust-for-bitcoiners-1](./rust-for-bitcoiners-1/)
 
 This directory contains the details about first run of the live classes spanning over 5 weeks.
@@ -17,7 +23,7 @@ This was organised and funded by Chaincode.
 
 This is a section which tries to explain core rust topics and concepts concisely.
 It contains a list of modules and each module has a list of topics.
-These are the reading materials for the students to go through before they appear for the live class.
+These are the reading materials for the students to go through before they appear for the live classes.
 Students will be allocated certain topics and questions and are expected to explain those to their
 fellow students clearly.
 
