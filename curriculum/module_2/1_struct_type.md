@@ -18,8 +18,8 @@ integers using 256 bits,
 // capital `U` is used to signify that this is a user defined type.
 
 struct U256 {
-    lower: u128, // least significant bits
-    upper: u128, // most significant bits
+    x0: u128, // least significant bits
+    x1: u128, // most significant bits
 }
 ```
 
