@@ -48,7 +48,8 @@ Demonstration of a naive hashing algorithm using xor.
 
 ### Module 3
 
-Enums and pattern matching with Result and Linked List type.
+Enums and pattern matching with Option and Result.
+Implementing Linked List with the help of Box.
 
 **Assignment**: Build your own bitcoin
 

@@ -66,3 +66,5 @@ unwarpping a `None` results in `panic` which is still a well defined, reproducib
 1. To simplify usage of recursive non cyclic data types like linked list, tree etc.,
 1. You need to transfer the ownership of a value without copying it
 1. Trait objects, that is values that implement a specific trait can be owned using Box.
+
+To read more about the above three points refer [rust book](https://doc.rust-lang.org/book/ch15-01-box.html).
