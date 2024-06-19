@@ -8,7 +8,7 @@ use std::io; // std crate has io module
 let mut input = String::new(); // has to be mutable because we have to fill this with user input
 io::stdin().read_line(&mut input).expect("Failed to read line");
 ```
-Refresh pointers concepts from [here](1_3_pointers.md).
+Refresh pointers concepts from [here](../module_1/3_intro_to_pointers.md).
 The idea of the above code is that ``` stdin() ``` function will return a handle which will listen
 for user input from the command line.
 If the input is successfully read then the input variable to refer to that string.
@@ -27,7 +27,7 @@ through command line, network calls using APIs etc.,
 
 The idea is to get the string input first and then try to decode it as *i32* for example.
 Note that not all strings can be converted to a number, so we have to do proper error handling.
-Rust compiler supports that with Option or Result types. In Python and Java, for example, we will have
+Rust compiler supports that with `Result` types. In Python and Java, for example, we will have
 runtime exceptions. In C `atoi` function will interpret the errors as 0, this is really bad because
 0 is a valid number.
 
