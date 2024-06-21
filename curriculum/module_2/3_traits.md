@@ -68,6 +68,23 @@ impl Add for U256 {
 }
 ```
 
+We can see this in action with the following example ([Rust playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=149afb833a39b6d7ad3aeb4fd30ddbf7)): 
+```rust
+fn main() {
+    let num1 = U256 {
+        x0: 2_u128.pow(65),
+        x1: 2_u128.pow(68),
+    };
+    
+    let num2 = U256 {
+        x0: 2_u128.pow(68),
+        x1: 2_u128.pow(127),
+    };
+    
+    println!("sum: {:?}", num1 + num2);
+}
+```
+
 What if we want to do `U256 + u128`?
 
 ```rust
