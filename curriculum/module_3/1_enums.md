@@ -110,6 +110,69 @@ enum Error {
 
 refer [doc](https://docs.rs/bitcoincore-rpc/latest/bitcoincore_rpc/enum.Error.html).
 
+### Accessing Enum Values
+There are different ways to work with an enum variant and access its inner value. Consider the following modified example from the documentation for the [`Read`](https://doc.rust-lang.org/std/io/trait.Read.html#examples) trait. You can also experiment with this on [Rust playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=dd936210b74c9ca00b11d3c27b546baf).
+```rust
+use std::io::prelude::*;
+
+fn main() -> std::io::Result<()> {
+    let mut b = "This string will be read".as_bytes();
+    let mut buffer = [0; 10];
+
+    // read up to 10 bytes
+    let bytes_read = b.read(&mut buffer)?;
+    println!("bytes_read: {}", bytes_read);
+    println!("modified buffer: {:?}", buffer);
+
+    // returns the Ok variant wrapping an empty tuple
+    Ok(())
+}
+```
+
+`b.read` will return a [`Result`](https://doc.rust-lang.org/std/io/trait.Read.html#tymethod.read) which will wrap a `usize` for the `Ok` variant. One way to access this inner value is to append the question mark operator. This will unwrap the inner value, which is the `usize` representing the bytes successfully read. If the result is an `Error` variant, this will instead propagate that error to the calling function and then exit the function.
+
+Let's explore triggering an error using the `read_exact` method. This will read an exact amount of bytes. So if the buffer is too large for the bytes available to read, this will propagate an error ([Rust playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=61e0c88c6ccb08d076b37102dcda2d63)):
+```rust
+use std::io::Read;
+
+fn main() -> std::io::Result<()> {
+    let mut b = "This string will be read".as_bytes();
+    let mut buffer = [0; 25];
+
+    // read exactly 25 bytes or return an error
+    b.read_exact(&mut buffer)?;
+    println!("modified buffer: {:?}", buffer);
+
+    // returns the Ok variant wrapping an empty tuple
+    Ok(())
+}
+```
+
+Run this and see what happens. Then, try modifying the string to make it longer. For example, you can change the first line to `let mut b = "This longer string will be read".as_bytes()`. See how this changes the result.
+
+Another way to write this could be something like the following ([Rust playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=61c22aa6a9b28fe80650b73a718145ea)):
+```rust
+use std::io::Read;
+
+fn read_25_bytes(bytes: &mut &[u8]) -> std::io::Result<[u8; 25]> {
+    let mut buffer = [0_u8; 25];
+    
+    // read exactly 25 bytes or propagate an error
+    bytes.read_exact(&mut buffer)?;
+
+    Ok(buffer)
+}
+
+fn main() {
+    let mut b = "This string will be read".as_bytes();
+
+    // handle the error case
+    match read_25_bytes(&mut b) {
+        Ok(buffer) => println!("read successfully! returned buffer: {:?}", buffer),
+        Err(e) => eprintln!("We received an error!: {}", e)
+    }
+}
+```
 
 ### Further reading
 
