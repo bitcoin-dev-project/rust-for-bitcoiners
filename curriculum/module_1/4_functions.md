@@ -15,7 +15,7 @@ code with mathematical framework in mind.
 *Examples*
 ```rust
 fn inc(x: i32) -> i32 {
-    x += 1
+    x + 1
 }
 
 fn mul(a: u64, b: u64) -> u64 {
