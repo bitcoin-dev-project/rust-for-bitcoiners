@@ -14,7 +14,7 @@ A pointer is a variable which can store the address of a variable or value.
 
 *Examples*
 ```rust
-let x: u8 = 1234521; // requires 1 byte(8 bits) to store "x" in memory
+let x: u128 = 1234521; // requires 1 byte(8 bits) to store "x" in memory
 let y: &u128 = &x; // In a 64 bit architecture this will require 64 bits to store "y" in memory
 let z: &&u128 = &y; // same bits as y
 
