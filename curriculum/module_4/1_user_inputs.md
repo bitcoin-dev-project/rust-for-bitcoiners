@@ -1,6 +1,9 @@
 # User Interaction in Rust through command line
 
-How to get input from user through commandline in rust?
+*Before learning about how we can interact with other computers using rust, let's
+review how we can interact with users.*
+
+## How to get input from user through commandline in rust?
 
 ```rust
 use std::io; // std crate has io module
