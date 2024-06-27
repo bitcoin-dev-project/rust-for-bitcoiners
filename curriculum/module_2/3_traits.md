@@ -3,7 +3,7 @@
 **Definition**
 Traits allows unification of types under certain context.
 
-By now you would've worked wit various number types like `u16`, `i32`, `f64` etc.,
+By now you would've worked with various number types like `u16`, `i32`, `f64` etc.,
 All of them behaves similarly to the programmer in general but each of them are
 represented differently in the computer.
 
@@ -20,8 +20,8 @@ the machine code generated to compute them are different, in fact it take extra 
 cycles to compute `y`.
 
 The compiler was able to provide the programmer with a uniform semantics but handles
-all the messy details by itself. This was possible because of Traits in rust, and for this
-particular example [Mul](https://doc.rust-lang.org/std/ops/trait.Mul.html) trait.
+all the messy details by itself. This was possible because of Traits in rust, and in this
+particular example [Mul](https://doc.rust-lang.org/std/ops/trait.Mul.html) trait is used.
 
 ## What is a Trait in rust?
 
@@ -39,6 +39,9 @@ trait Foo {
 
 In `do_something` function the parameter `self` refers to the variable of the type that is
 implementing the trait.
+
+Checkout playground [link](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=5381ef684ec7ce34ba76dd75a0c41c2b) which demonstrates how to implement `Foo` trait for
+various types.
 
 ## Implementing Add trait for U256
 
