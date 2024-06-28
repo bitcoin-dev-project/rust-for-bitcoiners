@@ -83,7 +83,7 @@ mod tests {
     }
 
     #[test]
-    fn dummy() {
+    fn attack_demo() {
         let data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0];
         println!("{}", data.len());
         let attack = xor_hash_attack(&data);
