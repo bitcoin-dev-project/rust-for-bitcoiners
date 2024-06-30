@@ -11,10 +11,10 @@ Here are some examples of how to create arrays in Rust:
 ```rust
 fn main() {
     let numbers: [u8; 5] = [1, 2, 3, 4, 5]; // An array of 5 integers
-    let zeros: [u8; 4] = [0; 4]; // An array of 5 integers, all initialized to 0
+    let zeros: [u8; 4] = [0; 4]; // An array of 4 integers, all initialized to 0
 
     println!("{:?}", numbers); // Output: [1, 2, 3, 4, 5]
-    println!("{:?}", zeros);   // Output: [0, 0, 0, 0, 0]
+    println!("{:?}", zeros);   // Output: [0, 0, 0, 0]
 
     println!("{}", numbers.len()); // Output: 5
     println!("{}", zeros.len()); // Output: 4

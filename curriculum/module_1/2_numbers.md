@@ -7,7 +7,7 @@ unsigned(Natural numbers) integers.
 
 *Integer examples*
 ```rust
-let x: i32 = 6
+let x: i32 = 6;
 let y = 65 as u8;
 ```
 The integer variants signed and unsigned are available from 8, 16, ..., 128 in rust.
