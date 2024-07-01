@@ -14,14 +14,14 @@ in case of conflict (happened to me), edit each conflicting file. It will have m
 ` <<<<<<< HEAD
 this is some content to mess with
 content to append
- =======
+
 totally different content to merge later
 >>>>>>> new_branch_to_merge_later `
 
 To select the new text, change it to something like:
 
-`this is some content to mess with
-content to append`
+`this is some content to mess with content to append`
+
 There can be potentially many of these, inspect and edit every single one.
 
 ### step 3 after fixing all conflicts, stage the conflicting files:
