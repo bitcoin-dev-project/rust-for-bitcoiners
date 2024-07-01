@@ -1,4 +1,4 @@
-# updating you repo with upstream if there is any correction made.
+## updating you repo with upstream if there is any correction made.
 
 Let me try to update mine so I can explain to the others
 All right, it's a bit more complicated than cloning again, it will require a rebase. I'll explain in the next message so it can eventually be pinned.
