@@ -1,4 +1,4 @@
-# updteing you repo with upstream if there is any correction made.
+# updating you repo with upstream if there is any correction made.
 
 Let me try to update mine so I can explain to the others
 All right, it's a bit more complicated than cloning again, it will require a rebase. I'll explain in the next message so it can eventually be pinned.
@@ -11,12 +11,12 @@ All right, it's a bit more complicated than cloning again, it will require a reb
 
 in case of conflict (happened to me), edit each conflicting file. It will have markers like these:
 
-`<<<<<<< HEAD
+` <<<<<<< HEAD
 this is some content to mess with
 content to append
-=======
+ =======
 totally different content to merge later
->>>>>>> new_branch_to_merge_later`
+>>>>>>> new_branch_to_merge_later `
 
 To select the new text, change it to something like:
 
