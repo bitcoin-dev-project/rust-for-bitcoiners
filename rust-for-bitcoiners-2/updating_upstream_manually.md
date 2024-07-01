@@ -16,7 +16,7 @@ this is some content to mess with
 content to append
 
 totally different content to merge later
->>>>>>> new_branch_to_merge_later `
+ new_branch_to_merge_later `
 
 To select the new text, change it to something like:
 
