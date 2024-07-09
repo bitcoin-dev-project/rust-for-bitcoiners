@@ -72,7 +72,72 @@ This one is pretty simple,
 
 ```rust
 struct LinkedList<T> {
-    head: Node<T>,
+    head: Option<Node<T>>,
+}
+```
+### Creating the list:
+#### Here are two ways we can define an Empty List:
+```rust
+fn main() {
+    // Create an empty linked list of type u32
+    let empty_list: LinkedList<u32> = LinkedList { head: Option::None }
+    println!("Created an empty linked list!");
+}
+```
+```rust
+// Or by implementing a constructor which returns a Linked List with an Option::None header
+impl<T> LinkedList<T> {
+    fn new() -> Self {
+        LinkedList { head: Option::None }
+    }
+}
+
+fn main() {
+    // Create an empty linked list of type u32
+    let list: LinkedList<u32> = LinkedList::new();
+    println!("Created an empty linked list!");
+}
+```
+
+#### Defining a Singleton List
+
+```rust
+fn main() {
+    // Create a node with the value 42
+    let node = Node {
+        value: 42,
+        next: None,
+    };
+
+    // Create a singleton linked list by setting head to the node
+    let singleton_list = LinkedList {
+        head: Some(node),
+    };
+    println!("Created a singleton linked list!");
+}
+```
+
+#### Defining a List with 2 elements
+
+```rust
+fn main() {
+    // Create the second node with the value 24, we need to create it first so we can 
+    // reference it as the next value in the first node
+    let second_node = Node {
+        value: 24,
+        next: None,
+    };
+    // Create the first node with the value 42 and next pointing to the second node
+    let first_node = Node {
+        value: 42,
+        next: Some(Box::new(second_node)),
+    };
+
+    // Create a linked list by setting head to the first node
+    let two_elements_list = LinkedList {
+        head: Some(first_node),
+    };
+    println!("Created a linked list with 2 elements!");
 }
 ```
 
