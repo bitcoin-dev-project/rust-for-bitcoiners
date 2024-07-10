@@ -3,7 +3,7 @@
 /* This module will be taught in the class */
 
 struct LinkedList<T> {
-    head: Node<T>,
+    head: Option<Node<T>>,
 }
 
 struct Node<T> {
