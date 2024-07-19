@@ -74,9 +74,31 @@ fn display_area<T>(shape: T) where T: Area {
     println!("Area of the shape is {}", shape.area());
 }
 
+fn demo() {
+    let circle = Circle{};
+    let rect = Rect{...};
+
+    display_area(circle);
+    /*  compiler will genrate a function 
+    fn display_area_circle(shape: Circle) {..}
+    */
+    display_area(rect);
+    /*  compiler will genrate a function 
+    fn display_area_rectangle(shape: Rectangle) {..}
+    */
+
+    display_area_dyn(cirlce);
+    // It does not generate different code for different types
+    // But how it will differentiate between a Circle and a Rectangle?
+    // Rust is going to create a new data structure (type) which is called a Virtual table
+    // for the Area trait
+}
+
 fn display_area_dyn(shape: &dyn Area) {
     // we have only one code generation for all the types
     println!("dyn Area of the shape is {}", shape.area());
+    // Virtual method table lookup happens, we get the associated function pointer
+    // go to that function and execute the corresponding code
 }
 
 fn display_areas_specific<T>(shapes: Vec<T>) where T: Area {
@@ -84,6 +106,8 @@ fn display_areas_specific<T>(shapes: Vec<T>) where T: Area {
         display_area(shape);
     }
 }
+// Why Vec<Area> is not a valid type?
+// Vec<T: Area>
 
 fn display_areas_polymorphic(shapes: Vec<&dyn Area>) {
     for shape in shapes {

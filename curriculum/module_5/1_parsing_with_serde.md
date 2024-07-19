@@ -78,9 +78,14 @@ Note that in the example `scriptpubkey_asm` key in the json is ignored in the st
 the associated macros for derivation and more.
 `serde_json` has features and functionalities necessary to work with json strings.
 So in a typical project we will be using both the crates together.
+Review the `main` function, imports and the Cargo.toml file.
 
 ## Missing Field error
 
 Try removing one of the fields from the example json string and run the demo cargo project.
 The assertion at the end should fail. Change the type of the specific field in the rust to an `Option<T>`,
 whatever that specific `T` was, then it should pass.
+
+## Further reading
+
+[serde tutorial by Shaan](../../tutorials/JSON_serialization_with_serde.md)

@@ -67,3 +67,11 @@ Creating more involved messages like crafting a transaction, exporting data to a
 requires a dive deep into the *bitcoin* crate, which we will do in [module_5](../module_5/).
 It is also possible to communicate with a bitcoin node through TCP, which gives us more flexibility.
 Basics of it will be covered in [module_8](../module_8/).
+
+
+## What is RPC?
+
+In http, in URI you specify the resource, in the request body you specify some data.
+REST API end point, you pass data to the endpoint.
+
+RPC endpoints are treated like a function and you pass data like inputs.

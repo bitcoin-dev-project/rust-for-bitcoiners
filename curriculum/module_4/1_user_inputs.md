@@ -39,9 +39,11 @@ runtime exceptions. In C `atoi` function will interpret the errors as 0, this is
 let x: Result<i32, _> = input.parse();
     match x {
         Ok(num) => println!("Parsed number: {}", num),
-        Err(e) => println!("Failed to parse: {}", e),
+        Err(e) => println!("Failed to parse: {}\n so please enter a valid number", e),
     }
+    input.parse::<i32>().unwrap();
 // This works because in Rust all the built in types have implemented `FromStr` trait
+atoi("dane") == atoi("0") == atoi("0000");
 ```
 
 There are advanced libraries to parse the strings to appropriate types, we will discuss about them
