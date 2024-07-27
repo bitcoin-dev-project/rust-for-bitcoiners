@@ -54,6 +54,55 @@ The same arguments holds for `Rc` type also but we can't get mutable reference t
 heap because it allows multiple references to that value, which means by the borrow checker rule
 that value cannot have a mutable reference.
 
+## Read
+
+When reading data, we can pass in different types to the read method call and there won't be any type mismatch issues because those types will be coerced into the correct slice type. 
+
+Consider the example below where the buffer is passed as mutable reference to a slice as indicated by the `[..]`. This is the type as defined by the [read method](https://doc.rust-lang.org/nightly/std/io/trait.Read.html#tymethod.read):
+```rust
+use std::io;
+use std::io::prelude::*;
+use std::fs::File;
+
+fn main() -> io::Result<()> {
+    let mut f = File::open("foo.txt")?;
+    let mut buffer = [0; 10];
+
+    // read up to 10 bytes
+    let n = f.read(&mut buffer[..])?;
+
+    println!("The bytes: {:?}", &buffer[..n]);
+    Ok(())
+}
+```
+
+This could also be written to accept an Array or a Vec as an argument since both are coerced into a slice:
+```rust
+use std::io;
+use std::io::prelude::*;
+use std::fs::File;
+
+fn main() -> io::Result<()> {
+    let mut f = File::open("foo.txt")?;
+
+    let mut buffer = [0; 10];
+    
+    // Can also pass a Vec
+    // let n = 10;
+    // let mut buffer = vec![0; n];
+
+    // read up to 10 bytes
+    f.read(&mut buffer)?;
+
+    println!("The bytes: {:?}", &buffer);
+    Ok(())
+}
+```
+
+An Array is coerced into a slice due to something known as an [Unsized Coercion](https://doc.rust-lang.org/reference/type-coercions.html#unsized-coercions), where sized types [T; N] are coerced into an unsized type [T].
+
+A Vec is coerced into a slice due to the [implementation of the DerefMut trait](https://doc.rust-lang.org/std/vec/struct.Vec.html#impl-DerefMut-for-Vec%3CT,+A%3E).
+
 ## Performance implications
 
 Like any other structs `Box<T>` and `Rc<T>` values are stored in stack which has a pointer variable
