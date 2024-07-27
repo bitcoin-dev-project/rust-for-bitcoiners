@@ -89,3 +89,12 @@ fn main() {
 In the above example it is not possible during the compile time to determine when to drop
 the value `Some(45)` from heap, because the function `f` is invoked `n` number of times, where
 during each time the value is cloned and `n` can only be known at run time.
+
+One might claim that why can't Rust compiler simly drop the value after the execution of for loop
+in the main function.
+
+1. But what if the value that we talk about takes significant space in memory, for example it points to a Vec?
+1. Inside the function `f` after some point it does an expensive computation or waits for some I/O?
+
+In the second question in the nth call it would be optimal to drop the value during the nth call of `f`
+before making the time consuming task.
