@@ -158,3 +158,62 @@ impl TreeNode {
 
 One should observe that without `Cell` and `RefCell` we would not be able to write safe Rust code.
 Yes you guessed it! Both these types uses unsafe type [UnsafeCell](https://doc.rust-lang.org/stable/std/cell/struct.UnsafeCell.html) under the hood.
+
+## Scenario 4: Updating a collection while iterating
+
+Sometimes we might want to iterate over a structure, read its contents and modify one element while reading.
+
+Rust won't allow this with the default rules because we would have to grab the entire structure as mutable while we are iterating over it.
+
+Consider the [following example](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=43fa27a140c6472cedc0b0c8bbdd7ab6):
+```rust
+#![allow(unused)]
+use std::collections::HashMap;
+use std::cell::RefCell;
+
+fn main() {
+    let mut map: HashMap<&str, u32> = HashMap::new();
+    map.insert("hello", 123_u32);
+    map.insert("world", 124_u32);
+    
+    println!("{:?}", map);
+
+    // iterate over map
+    for (key, value) in map.iter() {
+        if key == &"hello" {
+            let mut val = map.get_mut("world").unwrap();
+            *val = 250;
+        }
+    }
+    
+    println!("{:?}", map);
+}
+```
+
+This will fail to compile with the error message: *error[E0502]: cannot borrow `map` as mutable because it is also borrowed as immutable*
+
+But we don't want to borrow the entire structure as mutable, just the individual element and modify it. We can do this with RefCell. See [example](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=8badd6765734cc8822baf20057d0e8c0) below:
+```rust
+#![allow(unused)]
+use std::collections::HashMap;
+use std::cell::RefCell;
+
+fn main() {
+    let mut map: HashMap<&str, RefCell<u32>> = HashMap::new();
+    map.insert("hello", RefCell::new(123));
+    map.insert("world", RefCell::new(124));
+    
+    println!("{:?}", map);
+
+    // iterate over map
+    for (key, refcell_value) in map.iter() {
+        if key == &"hello" {
+            let mut val = map.get("world").unwrap().borrow_mut();
+            *val = 250;
+        }
+    }
+    
+    println!("{:?}", map);
+}
+```
+This will compile and correctly modify the value. 
