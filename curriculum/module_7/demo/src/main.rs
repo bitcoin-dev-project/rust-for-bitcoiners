@@ -1,5 +1,6 @@
 mod unmonitored_spawn;
+mod monitored_spawn;
 
 fn main() {
-    unmonitored_spawn::demo();
+    monitored_spawn::demo();
 }
