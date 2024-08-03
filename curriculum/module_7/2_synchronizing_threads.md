@@ -46,3 +46,28 @@ To explain further, `data` variable is owned by the main thread and the `data_cl
 moved into the spawning thread.
 So every time a thread exits the reference counter of the `Arc` type is decrementec atomically.
 
+## Mutating data shared by multiple threads
+
+We saw how to use `RefCell` with `Rc` like `Rc<RefCell<T>>`,
+to have shared mutable data in single threaded context which ensures that borrow checker rule
+is satisfied in runtime.
+Similarly we have [Mutex](https://doc.rust-lang.org/std/sync/struct.Mutex.html) which ensures that borrow checker rule is satisfied in runtime when shared
+among multiple threads using `Arc`, like `Arc<Mutex<T>>`.
+
+The behaviour of `Mutex` is different from `RefCell`. It has locking semantics.
+
+```rust
+let data = Mutex::new(0);
+
+// To get the mutable reference
+let mut data_ref = data.lock().unwrap(); // ignore unwrap for now
+*data_ref = 50;
+```
+
+When a mutex is locked by a thread then all the other threads which are trying to lock that
+mutex will be forced to wait. This was handled in OS level and rust gives us these safe types
+to work with them.
+When the locked reference (`data_ref` in our example) goes out of scope Rust automatically unlocks the
+mutex. Then the one of the other threads waiting will be allowed to lock the mutex and access it's value.
+
+Putting it all together checkout this parallel counter implementation using `Mutex` and `Arc` [example](./demo/src/parallel_counter.rs).

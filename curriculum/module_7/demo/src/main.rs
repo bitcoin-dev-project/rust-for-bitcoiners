@@ -1,7 +1,8 @@
 mod unmonitored_spawn;
 mod monitored_spawn;
 mod interleaving;
+mod sharing_values;
 
 fn main() {
-    interleaving::demo();
+    sharing_values::demo();
 }
