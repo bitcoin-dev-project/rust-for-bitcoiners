@@ -1,6 +1,7 @@
 mod unmonitored_spawn;
 mod monitored_spawn;
+mod interleaving;
 
 fn main() {
-    monitored_spawn::demo();
+    interleaving::demo();
 }

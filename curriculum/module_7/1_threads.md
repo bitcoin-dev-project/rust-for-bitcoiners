@@ -41,6 +41,8 @@ It's just an abstraction over hardware threads.
 When a process starts a separate thread is allocated to that process which is called the main thread.
 In rust you start the process using `cargo run` command.
 
+### Independent lifetime
+
 In rust you can spawn a new thread from the main thread like shown below,
 Execute the example shown in [unmonitored thread](./demo/src/unmonitored_spawn.rs) multiple times
 to observe the strange behaviour of multi-threaded programming. What you just saw is called
@@ -48,6 +50,24 @@ to observe the strange behaviour of multi-threaded programming. What you just sa
 
 If you want the spawned thread to finish it's job completely use the `join` function on the handle as
 shown here [monitored thread](./demo/src/monitored_spawn.rs). This is a *well defined behaviour*.
+
+From the above example we learnt that each thread have different lifetimes, i.e a thread does not wait
+for other thread to finish unless `join` is invoked on the thread handle.
+
+## Inependent sequential execution
+
+By running this example [interleaving behaviour](./demo/src/interleaving.rs) several times one can
+observe that threads execute their instructions independently but sequentially.
+You will observe thread 1 and 2 print statements interleave with one another but you will never see
+thread 1 outputting in this order,
+
+```
+I talk about football
+I'm thread 1
+I'm boring :)
+```
+
+showing that each thread is sequential.
 
 The number of threads a process can invoke is only limited by the number of OS threads.
 
