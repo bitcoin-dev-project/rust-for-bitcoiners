@@ -42,7 +42,7 @@ impl<T: Eq + PartialEq + Hash> Graph<T> {
         todo!();
     }
 
-    pub fn contains_edge(&mut self, u: &T, v: &T) -> bool {
+    pub fn contains_edge(self, u: &T, v: &T) -> bool {
         todo!();
     }
 
