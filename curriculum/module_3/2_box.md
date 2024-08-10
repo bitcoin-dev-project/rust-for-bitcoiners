@@ -45,7 +45,7 @@ struct Person {
     name: String,
     age: u8,
 }
-fn may_exist() -> Option<Box<Record>> {
+fn may_exist() -> Option<Box<Person>> {
     // Do some computation
     if computation_succeeded() {
         Some(Box::new(Person{
