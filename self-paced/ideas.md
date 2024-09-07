@@ -1,0 +1,1 @@
+When recording try to have conversation with yourself to avoid being awkward and robotic.
