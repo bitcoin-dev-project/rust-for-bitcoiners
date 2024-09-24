@@ -10,6 +10,7 @@ let x: i32 = 5;
 let box_x: i32 = Box::new(x); // allocates the value x in the heap
 // box_x is an value of type Box(smart pointer) which has the address of the allocated value
 ```
+
 Just like any other value in Rust the value of type `Box` also has a single owner,
 in the above example `box_x` is the owner.
 When the variable `box_x` goes out of scope the value allocated in the heap will be freed.
