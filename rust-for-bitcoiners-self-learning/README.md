@@ -17,6 +17,8 @@
 
 [Readng](../curriculum/module_3/)
 
+[Quiz](https://docs.google.com/forms/d/e/1FAIpQLSeR1JzPvIlgmzrQBM0cTvDrmkouVGwdZhRl17dFu3Rkj_TnKg/viewform?usp=sf_link)
+
 ## Corresponding Videos
 
 [videos](https://drive.google.com/drive/folders/1ipb8BzaeeC_ZJ1tz1isQlXn3yf7S15C7?usp=drive_link)
