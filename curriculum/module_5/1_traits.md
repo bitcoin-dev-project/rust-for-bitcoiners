@@ -27,7 +27,7 @@ particular example [Mul](https://doc.rust-lang.org/std/ops/trait.Mul.html) trait
 
 A trait is simply a list of types and function definitions.
 
-**Example**
+### Example
 
 ```rust
 trait Foo {

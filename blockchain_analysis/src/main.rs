@@ -20,7 +20,7 @@ fn main() {
 
     let rpc_client = Client::new(&rpc_url, Auth::UserPass(rpc_user, rpc_password)).unwrap();
 
-    let cookie_auth = Auth::CookieFile(PathBuf::from_str("string").unwrap());
+    let cookie_auth: Auth = Auth::CookieFile(PathBuf::from_str("string").unwrap());
 
     // track_utxo_set_10(&rpc_client, 831200).unwrap();
     let res = txs_sort_unique_input_addrs(&rpc_client, 144008).unwrap();

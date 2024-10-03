@@ -4,6 +4,7 @@ What does it mean to develop software for Bitcoin?
 Let's dial back and think about how Bitcoin software works.
 
 In simplified terms, a Bitcoin node
+
 * Crafts a message and broadcast it to it's peers
 * Stores some messages permanently in it's file storage
 
@@ -11,9 +12,7 @@ Eventhough the above two points does not cover all the capabilities and features
 of a bitcoin node it emphasizes the fact that in a distributed system creation,
 reception and transmission of messages are the fundamental problems.
 
-### Note
-
-Bicoin node can be written in any programming language. A node is simply a
+**NOTE:** Bicoin node can be written in any programming language. A node is simply a
 software running in a machine which follows bitcoin consensus rules.
 Although obvious, I believe stating this, paints a better picture of the problems
 that we are trying to solve.
