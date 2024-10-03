@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 #[derive(Debug, PartialEq, Eq, Clone, Copy)]
 struct Point {
     x: i32,
