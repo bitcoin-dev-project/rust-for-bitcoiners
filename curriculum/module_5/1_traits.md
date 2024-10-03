@@ -71,7 +71,8 @@ impl Add for U256 {
 }
 ```
 
-We can see this in action with the following example ([Rust playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=149afb833a39b6d7ad3aeb4fd30ddbf7)): 
+We can see this in action with the following example [Rust playground:](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=149afb833a39b6d7ad3aeb4fd30ddbf7)
+
 ```rust
 fn main() {
     let num1 = U256 {
