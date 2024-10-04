@@ -21,6 +21,12 @@ impl Point {
     } 
 }
 
+impl Point {
+    fn new(x: i32, y: i32) -> Point {
+        Point {x, y}
+    }
+}
+
 #[derive(Debug)]
 struct Circle {
     centre: Point,

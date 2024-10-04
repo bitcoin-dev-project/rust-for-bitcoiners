@@ -8,20 +8,6 @@ enum ScriptOpcode {
     OpReturn,       // OP_RETURN
 }
 
-// impl From<&str> for ScriptOpcode {
-//     fn from(op: &str) -> Self {
-//         match op {
-//             "OP_DUP" => ScriptOpcode::OpDup,
-//             "OP_HASH160" => ScriptOpcode::OpHash160,
-//             "OP_EQUAL" => ScriptOpcode::OpEqual,
-//             "OP_CHECKSIG" => ScriptOpcode::OpCheckSig,
-//             "OP_RETURN" => ScriptOpcode::OpReturn,
-//             _ => panic!("Invalid opcode"),
-//         }
-//     }
-// }
-
-
 impl TryFrom<&str> for ScriptOpcode {
     type Error = String;
 
