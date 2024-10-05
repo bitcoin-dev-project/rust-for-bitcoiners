@@ -75,8 +75,11 @@ struct LinkedList<T> {
     head: Option<Node<T>>,
 }
 ```
-### Creating the list:
-#### Here are two ways we can define an Empty List:
+
+### Creating the list
+
+#### Here are two ways we can define an Empty List
+
 ```rust
 fn main() {
     // Create an empty linked list of type u32
@@ -84,6 +87,7 @@ fn main() {
     println!("Created an empty linked list!");
 }
 ```
+
 ```rust
 // Or by implementing a constructor which returns a Linked List with an Option::None header
 impl<T> LinkedList<T> {

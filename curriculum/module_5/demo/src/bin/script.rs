@@ -8,6 +8,8 @@ enum ScriptOpcode {
     OpReturn,       // OP_RETURN
 }
 
+use ScriptOpcode::*;
+
 impl TryFrom<&str> for ScriptOpcode {
     type Error = String;
 
@@ -23,41 +25,33 @@ impl TryFrom<&str> for ScriptOpcode {
     }
 }
 
+impl TryFrom<u8> for ScriptOpcode {
+    type Error = String;
 
-#[derive(Debug, Clone, PartialEq)]
-struct Script {
-    opcodes: Vec<ScriptOpcode>,
-}
-
-impl Script {
-    fn new(opcodes: Vec<ScriptOpcode>) -> Self {
-        Script { opcodes }
+    fn try_from(value: u8) -> Result<Self, Self::Error> {
+        match value {
+            188 => Ok(OpDup),
+            // TODO extend this pattern matching to cover other cases
+            _ => Err(format!("Invalid opcode: {}", value)),
+        }
     }
 }
 
-impl IntoIterator for Script {
-    type Item = ScriptOpcode;
-    type IntoIter = std::vec::IntoIter<ScriptOpcode>;
+struct Empty;
 
-    fn into_iter(self) -> Self::IntoIter {
-        self.opcodes.into_iter()
-    }
-}
 
 fn main() {
-    let script = Script::new(vec![
-        ScriptOpcode::OpDup,
-        ScriptOpcode::OpHash160,
-        ScriptOpcode::OpEqual,
-        ScriptOpcode::OpCheckSig,
-    ]);
+    let op = OpEqual;
+    let op1 = op.clone();
+    let x = ScriptOpcode::try_from("OP_DUP");
 
-    for opcode in script {
-        println!("{:?}", opcode);
-    }
+    let y: Result<ScriptOpcode, _> = TryFrom::try_from("OP_CHECK_SIG");
 
-    let x: Result<ScriptOpcode, _> = "OP_DUP".try_into();
+    let z: Result<ScriptOpcode, _> = "OP_DUP".try_into();
 
+    let op: ScriptOpcode = 188u8.try_into().unwrap();
+
+    assert_eq!(op, OpDup);
 }
 
 
