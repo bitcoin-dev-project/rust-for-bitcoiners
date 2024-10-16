@@ -51,10 +51,6 @@ fn main() {
     // shared ownership
 }
 
-// Why rust restricts that at any point there can be only one mutable reference?
-
-// Deref Trait demonstration
-
 fn deref_coersion(v: &String) {
     // Do something
 }

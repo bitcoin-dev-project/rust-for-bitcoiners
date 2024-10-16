@@ -118,32 +118,31 @@ When you want to have interior mutability of types which are not copyable use [R
 This comes with runtime over head because it checks in runtime whether there is a unique mutable borrow
 and panics in cases where borrow checking rules are violated.
 
-## Scenario 3: Tree with mutable nodes
+## Scenario 3: Graph with mutable nodes
 
-Tree is a special case of a [connected graph](https://en.wikipedia.org/wiki/Connectivity_(graph_theory)) which does not contain any cycle.
-A node in a tree can have muliple references to it, so we need to use `Rc` in conjunction with `RefCell`.
+A node in a graph can have muliple references to it, so we need to use `Rc` in conjunction with `RefCell`.
 
-The example rust code to represent a mutable TreeNode.
+The example rust code to represent a GraphNode, with mutable value.
 
 ```rust
 use std::cell::RefCell;
 use std::rc::Rc;
 
-struct TreeNode {
+struct GraphNode {
     value: RefCell<i32>,
-    children: Vec<Rc<TreeNode>>,
+    children: RefCell<Vec<Rc<GraphNode>>>,
 }
 
-impl TreeNode {
-    fn new(value: i32) -> Rc<TreeNode> {
-        Rc::new(TreeNode {
+impl GraphNode {
+    fn new(value: i32) -> Rc<GraphNode> {
+        Rc::new(GraphNode {
             value: RefCell::new(value),
             children: Vec::new(),
         })
     }
 
-    fn add_child(parent: &Rc<TreeNode>, child: Rc<TreeNode>) {
-        parent.children.push(child);
+    fn add_child(parent: &Rc<GraphNode>, child: Rc<GraphNode>) {
+        parent.children.borrow_mut().push(child);
     }
 
     fn set_value(&self, new_value: i32) {
