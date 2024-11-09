@@ -1,6 +1,6 @@
 use std::thread;
 
-pub fn demo() {
+fn main() {
     let t1 = thread::spawn(|| {
         println!("I'm thread 1");
         println!("I talk about football");

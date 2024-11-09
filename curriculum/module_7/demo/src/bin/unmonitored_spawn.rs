@@ -1,8 +1,9 @@
 use std::thread;
 use std::time::Duration;
 
-pub fn demo() {
-    let handle = thread::spawn(|| {
+fn main() {
+    // New Thread invoked from this main thread
+    thread::spawn(|| {
         println!("Hi I'm different from main!");
         println!("You may not hear my full message...");
         println!("main might die sooner than me...");
@@ -11,7 +12,8 @@ pub fn demo() {
             println!("{i}");
         }
     });
+
+    // main thread sleeps
     thread::sleep(Duration::from_nanos(1000000));
-    handle.join();
     println!("Exiting main");
 }

@@ -7,7 +7,7 @@ fn main() {
     let mut handles = vec![];
 
     // Number of threads
-    let num_threads = 10;
+    let num_threads = 5;
 
     // Spawn threads
     for _ in 0..num_threads {
@@ -16,11 +16,14 @@ fn main() {
 
         // Create a new thread
         let handle = thread::spawn(move || {
+            let mut i_c = 0;
+            for _i in 0..1_000_00 {
+                i_c += 1;
+            }
+
             // Lock the mutex to get access to the u64 value
             let mut num = counter.lock().unwrap();
-
-            // Increment the u64 value
-            *num += 1;
+            *num += i_c;
         });
 
         // Collect thread handles
