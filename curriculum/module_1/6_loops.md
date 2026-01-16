@@ -12,7 +12,7 @@ fn main() {
 
     loop {
         counter += 1;
-        println!("Counter: {}", counter); // Output: 5
+        println!("Counter: {}", counter); // Output: Counter: 1 ... Counter: 5
 
         if counter == 5 {
             break;
